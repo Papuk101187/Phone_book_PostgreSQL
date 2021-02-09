@@ -7,12 +7,14 @@ import lombok.Data;
 public class ApplicationGetPropertys {
 
 
-    String uriadd = "";
-    String urisearchcontact = "";
-    String getcontact = "";
+    String workmode;
+    String baseURLadd;
+    String baseURLsearch;
+    String baseURLget;
+    String file;
 
-    String baseURLlogin = "";
-    String baseURLregistration = "";
+    String baseURLlogin;
+    String baseURLregistration;
 
 
 

@@ -60,7 +60,6 @@ public class ApiUserService implements UsersService {
                 .build();
 
         HttpResponse<String> response = httpCli.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
         String respons = response.body();
 
         return respons;

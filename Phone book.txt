@@ -1,3 +1,2 @@
-vasia [email :vasia@i.ua],
-email [email :email],
-vasia [email :vasia@i.ua],
+
+popo [email :vasia@i.ua],

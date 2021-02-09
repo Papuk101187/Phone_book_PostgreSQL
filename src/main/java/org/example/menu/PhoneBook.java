@@ -45,8 +45,9 @@ public class PhoneBook {
 
         while (true) {
 
+            System.out.println("PhoneBook.runProgram");
+
             if (contactService.checkingService() == true) {
-                System.out.println("Просим ввести данные аккаунта");
                 user = getDataUser(user);
                 if (usersService.login(user) == null) {
                     System.out.println("Логин отсутсвует");
