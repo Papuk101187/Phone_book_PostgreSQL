@@ -11,14 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configuration/CreateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configuration/CreateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/HttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/HttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/JsonHttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/JsonHttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/ApiContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/ApiContactService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactServiceTEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactServiceTEST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,22 +130,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1612859351265" />
-    <state width="1323" height="330" key="GridCell.Tab.0.bottom" timestamp="1613246971868">
+    <state width="1323" height="304" key="GridCell.Tab.0.bottom" timestamp="1613247749529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="330" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613246971868" />
-    <state width="1323" height="330" key="GridCell.Tab.0.center" timestamp="1613246971868">
+    <state width="1323" height="304" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613247749529" />
+    <state width="1323" height="304" key="GridCell.Tab.0.center" timestamp="1613247749529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="330" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613246971868" />
-    <state width="1323" height="330" key="GridCell.Tab.0.left" timestamp="1613246971868">
+    <state width="1323" height="304" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613247749529" />
+    <state width="1323" height="304" key="GridCell.Tab.0.left" timestamp="1613247749529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="330" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613246971868" />
-    <state width="1323" height="330" key="GridCell.Tab.0.right" timestamp="1613246971868">
+    <state width="1323" height="304" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613247749529" />
+    <state width="1323" height="304" key="GridCell.Tab.0.right" timestamp="1613247749529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="330" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613246971868" />
+    <state width="1323" height="304" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613247749529" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612818554160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

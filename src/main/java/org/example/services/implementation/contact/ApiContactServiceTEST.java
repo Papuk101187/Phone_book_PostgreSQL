@@ -56,7 +56,7 @@ public class ApiContactServiceTEST implements ContactService {
                 objectMapp.writeValueAsString(contact),
                 usersServic.getToken());
 
-        HttpResponse <String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
+        HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
         String status = httpResponse.body();
 
         return status;
@@ -81,8 +81,8 @@ public class ApiContactServiceTEST implements ContactService {
                 objectMapp.writeValueAsString(uzers),
                 usersServic.getToken());
 
-        HttpResponse <String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
-         status = httpResponse.body();
+        HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
+        status = httpResponse.body();
 
         ResponceContacts usersService = objectMapper.readValue(httpResponse.body(), ResponceContacts.class);
         contacts = usersService.getContacts();
@@ -97,18 +97,10 @@ public class ApiContactServiceTEST implements ContactService {
         ObjectMapper objectMapper = new ObjectMapper();
         List<Contact> contacts;
 
+        HttpRequest httpRequest = jsonHttpRequestFactory.createGetRequest(urlget);
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(urlget))
-                .GET()
-                .header("Accept", "application/json")
-                .header("Authorization", "Bearer " + usersServic.getToken())
-                .build();
-
-        HttpResponse<String> response = httpClie.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        HttpResponse<String> response = httpClie.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         String status = response.body();
-
 
         ResponceContacts usersService = objectMapper.readValue(status, ResponceContacts.class);
         contacts = usersService.getContacts();
