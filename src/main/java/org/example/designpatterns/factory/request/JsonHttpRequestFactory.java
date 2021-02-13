@@ -26,13 +26,14 @@ public class JsonHttpRequestFactory implements HttpRequestFactory {
     }
 
     @Override
-    public HttpRequest createPostRequest(String url, Object object,String token) throws JsonProcessingException {
+    public HttpRequest createPostRequest(String url, String object,String token) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         String obj = objectMapper.writeValueAsString(object);
         return HttpRequest.newBuilder()
-                .uri(URI.create(""))
+                .uri(URI.create(url))
                 .header("Content-Type", "application/json")
-                .POST(HttpRequest.BodyPublishers.ofString(obj))
+                .header("Authorization", "Bearer " + token)
+                .POST(HttpRequest.BodyPublishers.ofString(object))
                 .build();
     }
 

@@ -59,7 +59,7 @@ public class ApiContactService implements ContactService {
         String uzers = objectMapp.writeValueAsString(contact1);
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://mag-contacts-api.herokuapp.com/contacts/add"))
+                .uri(URI.create(urladd))
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + Token)
                 .POST(HttpRequest.BodyPublishers.ofString(uzers))
