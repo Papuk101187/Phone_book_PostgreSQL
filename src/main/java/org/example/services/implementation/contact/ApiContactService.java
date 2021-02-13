@@ -1,7 +1,9 @@
 package org.example.services.implementation.contact;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.designpatterns.contacts.request.HttpRequestFactory;
 import org.example.designpatterns.contacts.request.JsonHttpRequestFactory;
+import org.example.designpatterns.contacts.response.HttpResponseFactory;
 import org.example.designpatterns.contacts.response.JsonHttpResponce;
 import org.example.entity.Contact;
 import org.example.services.ContactService;
@@ -26,8 +28,8 @@ public class ApiContactService implements ContactService {
     HttpClient httpClie;
     boolean check = false;
 
-    JsonHttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
-    JsonHttpResponce jsonHttpResponce = new JsonHttpResponce();
+    HttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
+    HttpResponseFactory jsonHttpResponce = new JsonHttpResponce();
 
     public boolean checkingService() {
         return check;
