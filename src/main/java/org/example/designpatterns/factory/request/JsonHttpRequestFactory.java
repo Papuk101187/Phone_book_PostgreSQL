@@ -18,11 +18,12 @@ public class JsonHttpRequestFactory implements HttpRequestFactory {
 
 
     @Override
-    public HttpRequest createGetRequest(String url) {
+    public HttpRequest createGetRequest(String url,String token) {
         return HttpRequest.newBuilder()
-                .GET()
                 .uri(URI.create(url))
+                .GET()
                 .header("Accept", "application/json")
+                .header("Authorization", "Bearer " + token)
                 .build();
     }
 

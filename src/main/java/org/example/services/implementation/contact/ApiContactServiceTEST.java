@@ -74,11 +74,9 @@ public class ApiContactServiceTEST implements ContactService {
         ObjectMapper objectMapper = new ObjectMapper();
         String status;
 
-        String uzers = objectMapper.writeValueAsString(requestContactName);
-
         HttpRequest httpRequest = jsonHttpRequestFactory.createPostRequest(
                 urlsearch,
-                objectMapp.writeValueAsString(uzers),
+                objectMapp.writeValueAsString(requestContactName),
                 usersServic.getToken());
 
         HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
@@ -96,7 +94,7 @@ public class ApiContactServiceTEST implements ContactService {
         ObjectMapper objectMapper = new ObjectMapper();
         List<Contact> contacts;
 
-        HttpRequest httpRequest = jsonHttpRequestFactory.createGetRequest(urlget);
+        HttpRequest httpRequest = jsonHttpRequestFactory.createGetRequest(urlget,usersServic.getToken());
 
         HttpResponse<String> response = httpClie.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         String status = response.body();
