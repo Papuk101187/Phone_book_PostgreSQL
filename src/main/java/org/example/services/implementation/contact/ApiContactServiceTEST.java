@@ -56,8 +56,10 @@ public class ApiContactServiceTEST implements ContactService {
                 objectMapp.writeValueAsString(contact),
                 usersServic.getToken());
 
-        HttpResponse httpResponse = jsonHttpResponce.createResponse(httpRequest,httpClie);
+        HttpResponse httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
+        String status = (String) httpResponse.body();
 
+        return status;
 
     }
 

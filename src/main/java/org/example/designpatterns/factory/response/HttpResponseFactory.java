@@ -7,7 +7,7 @@ import java.net.http.HttpResponse;
 
 public interface HttpResponseFactory {
 
-    public HttpResponse createResponse(HttpRequest httpRequest, HttpClient httpClient);
+    public HttpResponse createResponse(HttpRequest httpRequest, HttpClient httpClient) throws IOException, InterruptedException;
 
 
 

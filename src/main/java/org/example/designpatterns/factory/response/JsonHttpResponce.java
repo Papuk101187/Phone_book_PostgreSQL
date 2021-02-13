@@ -11,11 +11,12 @@ import java.net.http.HttpResponse;
 public class JsonHttpResponce implements HttpResponseFactory {
 
 
-
     @Override
-    public HttpResponse createResponse(HttpRequest httpRequest,HttpClient httpClient) throws IOException, InterruptedException {
+    public HttpResponse <String>  createResponse(HttpRequest httpRequest,HttpClient httpClient) throws IOException, InterruptedException {
         return httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
     }
+
+
 
 
 }
