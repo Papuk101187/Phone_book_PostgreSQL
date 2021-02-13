@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactServiceTEST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/JsonHttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/JsonHttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
