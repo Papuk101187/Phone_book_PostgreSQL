@@ -3,6 +3,8 @@ package org.example.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
+import org.example.designpatterns.services.contacts.CreateContactsServiceFactory;
+import org.example.designpatterns.services.contacts.CreateContactsServicesFactory;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
 import org.example.services.implementation.contact.ApiContactService;
@@ -16,6 +18,7 @@ import java.net.http.HttpClient;
 public class CreateService {
 
     ApplicationGetPropertys properties;
+    CreateContactsServiceFactory createContactsServiceFactory = new CreateContactsServicesFactory();
 
     public ContactService getContactservice() {
         return contactservice;
