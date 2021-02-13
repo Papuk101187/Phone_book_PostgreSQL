@@ -56,7 +56,8 @@ public class CreateService {
                 contactservice= new ApiContactService(
                         usersService,
                         objectMapper,
-                        client,properties.getBaseURLadd(),
+                        client,
+                        properties.getBaseURLadd(),
                         properties.getBaseURLsearch(),
                         properties.getBaseURLget());
                 break;
