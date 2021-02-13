@@ -56,8 +56,8 @@ public class ApiContactServiceTEST implements ContactService {
                 objectMapp.writeValueAsString(contact),
                 usersServic.getToken());
 
-        HttpResponse httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
-        String status = (String) httpResponse.body();
+        HttpResponse <String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
+        String status = httpResponse.body();
 
         return status;
 
@@ -75,19 +75,16 @@ public class ApiContactServiceTEST implements ContactService {
         String status;
 
         String uzers = objectMapper.writeValueAsString(requestContactName);
-        System.out.println(uzers);
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(urlsearch))
-                .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + usersServic.getToken())
-                .POST(HttpRequest.BodyPublishers.ofString(uzers))
-                .build();
+        HttpRequest httpRequest = jsonHttpRequestFactory.createPostRequest(
+                urlsearch,
+                objectMapp.writeValueAsString(uzers),
+                usersServic.getToken());
 
-        HttpResponse<String> response = httpClie.send(request, HttpResponse.BodyHandlers.ofString());
-        status = response.body();
+        HttpResponse <String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
+         status = httpResponse.body();
 
-        ResponceContacts usersService = objectMapper.readValue(status, ResponceContacts.class);
+        ResponceContacts usersService = objectMapper.readValue(httpResponse.body(), ResponceContacts.class);
         contacts = usersService.getContacts();
 
         return contacts;
