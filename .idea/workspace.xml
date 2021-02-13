@@ -10,16 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/creatingservices/UsersServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configuration/CreateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configuration/CreateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/contactsapp/HttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/contactsapp/HttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/contactsapp/JsonHttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/request/contactsapp/JsonHttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/response/contactsapp/HttpResponseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/response/contactsapp/HttpResponseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/response/contactsapp/JsonHttpResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/response/contactsapp/JsonHttpResponce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" afterDir="false" />
-    </list>
+    <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -117,10 +108,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613245007282" />
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1612877672908">
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613250339074">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1612877672908" />
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1613250339074" />
     <state x="455" y="235" width="458" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1612872008891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
