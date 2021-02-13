@@ -3,11 +3,9 @@ package org.example.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
-import org.example.configuration.ApplicationGetPropertys;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
 import org.example.services.implementation.contact.ApiContactService;
-import org.example.services.implementation.contact.ApiContactServiceTEST;
 import org.example.services.implementation.contact.FileContactService;
 import org.example.services.implementation.contact.InMemoryContactService;
 import org.example.services.implementation.user.ApiUserService;
@@ -55,7 +53,7 @@ public class CreateService {
                         properties.getBaseURLlogin(),
                         objectMapper,
                         client);
-                contactservice= new ApiContactServiceTEST(
+                contactservice= new ApiContactService(
                         usersService,
                         objectMapper,
                         client,properties.getBaseURLadd(),
