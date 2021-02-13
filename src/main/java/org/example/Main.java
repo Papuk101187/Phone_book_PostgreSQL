@@ -14,6 +14,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
+
+
         ConfigLoader configLoader = new ConfigLoader(); // загружает properties из файла
         String profile = configLoader.getProfile(); // получаем профиль из системы
         String configFile = "app-"+profile+".properties"; // получаем имя файла
@@ -28,6 +30,9 @@ public class Main {
 
         PhoneBook phoneBook = new PhoneBook(contactService, usersService, new User()); // наша телефонная книга
         phoneBook.start();
+
+
+
 
 
     }
