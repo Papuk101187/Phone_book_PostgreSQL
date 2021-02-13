@@ -9,5 +9,4 @@ public interface HttpRequestFactory {
     public HttpRequest createGetRequest(String url);
     public HttpRequest createPostRequest(String url,Object object,String token) throws JsonProcessingException;
 
-
 }
