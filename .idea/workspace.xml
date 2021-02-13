@@ -11,9 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/HttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/JsonHttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/factory/JsonHttpRequestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,15 +23,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Reflection№0" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,10 +104,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1612898214993" />
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1612901833681">
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1613241620927">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1612901833681" />
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613241620927" />
     <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1612877672908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

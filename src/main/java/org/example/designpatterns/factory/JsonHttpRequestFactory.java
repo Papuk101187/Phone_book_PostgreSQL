@@ -8,6 +8,7 @@ import java.net.http.HttpRequest;
 
 public class JsonHttpRequestFactory implements HttpRequestFactory {
 
+
     @Override
     public HttpRequest createGetRequest(String url) {
         return HttpRequest.newBuilder()
@@ -19,7 +20,6 @@ public class JsonHttpRequestFactory implements HttpRequestFactory {
 
     @Override
     public HttpRequest createPostRequest(String url, Object object) throws JsonProcessingException {
-
         ObjectMapper objectMapper = new ObjectMapper();
         String obj = objectMapper.writeValueAsString(object);
         return HttpRequest.newBuilder()
@@ -28,4 +28,5 @@ public class JsonHttpRequestFactory implements HttpRequestFactory {
                 .POST(HttpRequest.BodyPublishers.ofString(obj))
                 .build();
     }
+
 }

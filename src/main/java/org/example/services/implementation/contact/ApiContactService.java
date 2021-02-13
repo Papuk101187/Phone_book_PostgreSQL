@@ -1,6 +1,6 @@
 package org.example.services.implementation.contact;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.designpatterns.factory.JsonHttpRequestFactory;
 import org.example.entity.Contact;
 import org.example.services.implementation.dto.RequestContactName;
 import org.example.services.implementation.dto.ResponceContacts;
@@ -25,6 +25,8 @@ public class ApiContactService implements ContactService {
     HttpClient httpClie;
     boolean check=false;
 
+    JsonHttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
+
     public boolean checkingService() {
         return check;
     }
@@ -42,7 +44,6 @@ public class ApiContactService implements ContactService {
         this.urladd=urladdcontact;
         this.urlsearch=urlsearchcontact;
         this.urlget=urlget;
-
     }
 
     public String add(Contact contact1) throws IOException, InterruptedException {
