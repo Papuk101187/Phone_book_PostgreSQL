@@ -1,8 +1,9 @@
-package org.example.designpatterns.factory;
+package org.example.designpatterns.factory.request;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
+import org.example.designpatterns.factory.request.HttpRequestFactory;
 
 import java.net.URI;
 import java.net.http.HttpRequest;

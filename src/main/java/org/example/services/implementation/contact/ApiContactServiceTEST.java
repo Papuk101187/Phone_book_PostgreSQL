@@ -1,7 +1,7 @@
 package org.example.services.implementation.contact;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.designpatterns.factory.JsonHttpRequestFactory;
+import org.example.designpatterns.factory.request.JsonHttpRequestFactory;
 import org.example.entity.Contact;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
