@@ -2,6 +2,7 @@ package org.example.services.implementation.contact;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.designpatterns.factory.request.JsonHttpRequestFactory;
+import org.example.designpatterns.factory.response.JsonHttpResponce;
 import org.example.entity.Contact;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
@@ -27,6 +28,7 @@ public class ApiContactServiceTEST implements ContactService {
     boolean check = false;
 
     JsonHttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
+    JsonHttpResponce jsonHttpResponce = new JsonHttpResponce();
 
     public boolean checkingService() {
         return check;
@@ -54,21 +56,9 @@ public class ApiContactServiceTEST implements ContactService {
                 objectMapp.writeValueAsString(contact),
                 usersServic.getToken());
 
+        HttpResponse httpResponse = jsonHttpResponce.createResponse(httpRequest,httpClie);
 
 
-
-        HttpResponse<String> response = httpClie.send(request, HttpResponse.BodyHandlers.ofString());
-        String responce = response.body();
-
-        if (responce.contains("ok")) {
-            status = "Контакт добавлен на сервер";
-        } else {
-            status = "Контакт не добавлен на сервер";
-        }
-
-        System.out.println(responce);
-
-        return status;
     }
 
     public List<Contact> searchContact(String name) throws IOException, InterruptedException {
