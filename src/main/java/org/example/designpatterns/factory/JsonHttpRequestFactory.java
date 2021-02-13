@@ -9,6 +9,10 @@ import java.net.http.HttpRequest;
 public class JsonHttpRequestFactory implements HttpRequestFactory {
 
 
+    String url;
+    Object object;
+
+
     @Override
     public HttpRequest createGetRequest(String url) {
         return HttpRequest.newBuilder()

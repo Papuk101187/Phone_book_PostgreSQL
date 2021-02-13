@@ -1,4 +1,5 @@
 package org.example.services.implementation.contact;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.designpatterns.factory.JsonHttpRequestFactory;
 import org.example.entity.Contact;
@@ -23,7 +24,7 @@ public class ApiContactService implements ContactService {
     public String urlsearch;
 
     HttpClient httpClie;
-    boolean check=false;
+    boolean check = false;
 
     JsonHttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
 
@@ -38,12 +39,12 @@ public class ApiContactService implements ContactService {
                              String urlsearchcontact,
                              String urlget) {
         this.usersServic = usersService;
-        this.check=true;
-        this.objectMapp=objectMapper;
-        this.httpClie=client;
-        this.urladd=urladdcontact;
-        this.urlsearch=urlsearchcontact;
-        this.urlget=urlget;
+        this.check = true;
+        this.objectMapp = objectMapper;
+        this.httpClie = client;
+        this.urladd = urladdcontact;
+        this.urlsearch = urlsearchcontact;
+        this.urlget = urlget;
     }
 
     public String add(Contact contact1) throws IOException, InterruptedException {
@@ -52,7 +53,7 @@ public class ApiContactService implements ContactService {
         String Token = usersServic.getToken();
         String status;
 
-        System.out.println("Token "+Token);
+        System.out.println("Token " + Token);
 
 
         String uzers = objectMapp.writeValueAsString(contact1);
@@ -75,7 +76,7 @@ public class ApiContactService implements ContactService {
 
         System.out.println(responce);
 
-return status;
+        return status;
     }
 
     public List<Contact> searchContact(String name) throws IOException, InterruptedException {
