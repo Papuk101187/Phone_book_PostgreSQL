@@ -7,6 +7,7 @@ import org.example.designpatterns.factory.request.HttpRequestFactory;
 
 import java.net.URI;
 import java.net.http.HttpRequest;
+
 @Data
 public class JsonHttpRequestFactory implements HttpRequestFactory {
 
@@ -26,9 +27,7 @@ public class JsonHttpRequestFactory implements HttpRequestFactory {
     }
 
     @Override
-    public HttpRequest createPostRequest(String url, String object,String token) throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        String obj = objectMapper.writeValueAsString(object);
+    public HttpRequest createPostRequest(String url, String object, String token) throws JsonProcessingException {
         return HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .header("Content-Type", "application/json")

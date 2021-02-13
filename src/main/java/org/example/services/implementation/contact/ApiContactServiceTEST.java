@@ -93,7 +93,6 @@ public class ApiContactServiceTEST implements ContactService {
 
     public List<Contact> getAllcontact() throws IOException, InterruptedException {
 
-
         ObjectMapper objectMapper = new ObjectMapper();
         List<Contact> contacts;
 
