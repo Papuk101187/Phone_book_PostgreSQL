@@ -1,4 +1,4 @@
-package org.example.designpatterns.factory.response;
+package org.example.designpatterns.response.contactsapp.contacts.app;
 
 import lombok.Data;
 

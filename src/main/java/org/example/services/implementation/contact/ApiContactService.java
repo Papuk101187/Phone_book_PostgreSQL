@@ -1,21 +1,21 @@
 package org.example.services.implementation.contact;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.designpatterns.factory.request.contactsapp.JsonHttpRequestFactory;
-import org.example.designpatterns.factory.response.contactsapp.JsonHttpResponce;
+import org.example.designpatterns.request.contacts.app.JsonHttpRequestFactory;
 import org.example.entity.Contact;
-import org.example.services.ContactService;
-import org.example.services.UsersService;
 import org.example.services.implementation.dto.RequestContactName;
 import org.example.services.implementation.dto.ResponceContacts;
+import org.example.services.ContactService;
+import org.example.services.UsersService;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
 
-public class ApiContactServiceTEST implements ContactService {
+public class ApiContactService implements ContactService {
 
     UsersService usersServic;
     ObjectMapper objectMapp;
@@ -27,18 +27,17 @@ public class ApiContactServiceTEST implements ContactService {
     boolean check = false;
 
     JsonHttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
-    JsonHttpResponce jsonHttpResponce = new JsonHttpResponce();
 
     public boolean checkingService() {
         return check;
     }
 
-    public ApiContactServiceTEST(UsersService usersService,
-                                 ObjectMapper objectMapper,
-                                 HttpClient client,
-                                 String urladdcontact,
-                                 String urlsearchcontact,
-                                 String urlget) {
+    public ApiContactService(UsersService usersService,
+                             ObjectMapper objectMapper,
+                             HttpClient client,
+                             String urladdcontact,
+                             String urlsearchcontact,
+                             String urlget) {
         this.usersServic = usersService;
         this.check = true;
         this.objectMapp = objectMapper;
@@ -48,18 +47,36 @@ public class ApiContactServiceTEST implements ContactService {
         this.urlget = urlget;
     }
 
-    public String add(Contact contact) throws IOException, InterruptedException {
+    public String add(Contact contact1) throws IOException, InterruptedException {
 
-        HttpRequest httpRequest = jsonHttpRequestFactory.createPostRequest(
-                urladd,
-                objectMapp.writeValueAsString(contact),
-                usersServic.getToken());
 
-        HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
-        String status = httpResponse.body();
+        String Token = usersServic.getToken();
+        String status;
+
+        System.out.println("Token " + Token);
+
+
+        String uzers = objectMapp.writeValueAsString(contact1);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(urladd))
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + Token)
+                .POST(HttpRequest.BodyPublishers.ofString(uzers))
+                .build();
+
+        HttpResponse<String> response = httpClie.send(request, HttpResponse.BodyHandlers.ofString());
+        String responce = response.body();
+
+        if (responce.contains("ok")) {
+            status = "Контакт добавлен на сервер";
+        } else {
+            status = "Контакт не добавлен на сервер";
+        }
+
+        System.out.println(responce);
 
         return status;
-
     }
 
     public List<Contact> searchContact(String name) throws IOException, InterruptedException {
@@ -73,15 +90,20 @@ public class ApiContactServiceTEST implements ContactService {
         ObjectMapper objectMapper = new ObjectMapper();
         String status;
 
-        HttpRequest httpRequest = jsonHttpRequestFactory.createPostRequest(
-                urlsearch,
-                objectMapp.writeValueAsString(requestContactName),
-                usersServic.getToken());
+        String uzers = objectMapper.writeValueAsString(requestContactName);
+        System.out.println(uzers);
 
-        HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
-        status = httpResponse.body();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(urlsearch))
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + usersServic.getToken())
+                .POST(HttpRequest.BodyPublishers.ofString(uzers))
+                .build();
 
-        ResponceContacts usersService = objectMapper.readValue(httpResponse.body(), ResponceContacts.class);
+        HttpResponse<String> response = httpClie.send(request, HttpResponse.BodyHandlers.ofString());
+        status = response.body();
+
+        ResponceContacts usersService = objectMapper.readValue(status, ResponceContacts.class);
         contacts = usersService.getContacts();
 
         return contacts;
@@ -90,18 +112,28 @@ public class ApiContactServiceTEST implements ContactService {
 
     public List<Contact> getAllcontact() throws IOException, InterruptedException {
 
+
         ObjectMapper objectMapper = new ObjectMapper();
         List<Contact> contacts;
 
-        HttpRequest httpRequest = jsonHttpRequestFactory.createGetRequest(urlget,usersServic.getToken());
 
-        HttpResponse<String> response = httpClie.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(urlget))
+                .GET()
+                .header("Accept", "application/json")
+                .header("Authorization", "Bearer " + usersServic.getToken())
+                .build();
+
+        HttpResponse<String> response = httpClie.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
         String status = response.body();
+
 
         ResponceContacts usersService = objectMapper.readValue(status, ResponceContacts.class);
         contacts = usersService.getContacts();
 
         return contacts;
+
 
     }
 }
