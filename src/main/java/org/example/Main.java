@@ -35,15 +35,6 @@ public class Main {
         phoneBook.start();
 
 
-//        ContactBuffers contactBuffers = new ContactBuffers();
-//        contactBuffers.readBuffer();
-//
-//        String a = "[oleg [email :vasia@i.ua],";
-//
-//        String b = a.substring(a.length()-1);
-//        System.out.println(b);
-
-
 
 
     }
