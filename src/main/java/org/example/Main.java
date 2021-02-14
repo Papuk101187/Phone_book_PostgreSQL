@@ -2,11 +2,11 @@ package org.example;
 
 import org.example.configuration.ApplicationGetPropertys;
 import org.example.configuration.ConfigLoader;
+import org.example.configuration.CreateService;
 import org.example.entity.User;
 import org.example.menu.PhoneBook;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
-import org.example.configuration.CreateService;
 
 import java.io.IOException;
 

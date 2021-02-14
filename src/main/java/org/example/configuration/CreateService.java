@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import org.example.designpatterns.services.contacts.CreateContactsServiceFactory;
 import org.example.designpatterns.services.contacts.CreateContactsServicesFactory;
+import org.example.designpatterns.services.user.CreateUserServiceFactory;
+import org.example.designpatterns.services.user.CreateUsersFactory;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
 import org.example.services.implementation.contact.ApiContactService;
@@ -17,19 +19,22 @@ import java.net.http.HttpClient;
 @Data
 public class CreateService {
 
-    ApplicationGetPropertys properties;
     CreateContactsServiceFactory createContactsServiceFactory = new CreateContactsServicesFactory();
+    CreateUsersFactory createUsersFactory = new CreateUserServiceFactory();
+
 
     public ContactService getContactservice() {
         return contactservice;
     }
+
+    ApplicationGetPropertys properties;
 
     public UsersService getUsersService() {
         return usersService;
     }
 
     ContactService contactservice;
-    UsersService usersService ;
+    UsersService usersService;
 
     ObjectMapper objectMapper = new ObjectMapper();
     HttpClient client = HttpClient.newBuilder().build();
@@ -40,35 +45,33 @@ public class CreateService {
     }
 
 
-    public void BuildService(){
-        if(properties.getWorkmode()=="file"){
+    public void BuildService() {
+        if (properties.getWorkmode() == "file") {
             contactservice = new FileContactService(properties.getFile());
         }
 
         switch (properties.getWorkmode()) {
 
             case "file":
-                contactservice = new FileContactService(properties.getFile());
+                contactservice = createContactsServiceFactory.getContactServiceFile(properties.getFile());
                 break;
             case "api":
-                usersService = new ApiUserService(
-                        properties.getBaseURLregistration(),
-                        properties.getBaseURLlogin(),
-                        objectMapper,
-                        client);
-                contactservice= new ApiContactService(
+                usersService = createUsersFactory.getUserServiceApi(properties.baseURLregistration,
+                        properties.baseURLlogin, objectMapper, client);
+
+                contactservice = createContactsServiceFactory.getContactServiceApi(
                         usersService,
                         objectMapper,
                         client,
-                        properties.getBaseURLadd(),
+                        properties.baseURLadd,
                         properties.getBaseURLsearch(),
                         properties.getBaseURLget());
                 break;
             case "memory":
-                contactservice = new InMemoryContactService();
+                contactservice = createContactsServiceFactory.getInMemoryContactService();
 
         }
     }
-    }
+}
 
 

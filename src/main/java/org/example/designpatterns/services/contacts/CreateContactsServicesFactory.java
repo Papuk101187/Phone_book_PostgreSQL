@@ -11,29 +11,29 @@ import java.net.http.HttpClient;
 
 public class CreateContactsServicesFactory implements CreateContactsServiceFactory {
 
-
     ContactService contactService;
-
 
     @Override
     public ContactService getContactServiceFile(String files) {
+
         return contactService = new FileContactService(files);
     }
 
     @Override
-    public ContactService getContactServiceApi(UsersService usersService, ObjectMapper objectMapper, HttpClient httpClient, String getBaseURLadd, String getBaseURLsearch, String getBaseURLget) {
+    public ContactService getContactServiceApi(UsersService usersService, ObjectMapper objectMapper,HttpClient httpClient, String baseURLadd, String baseURLsearch, String baseURLget) {
         return contactService = new ApiContactService(
                 usersService,
                 objectMapper,
                 httpClient,
-                getBaseURLadd,
-                getBaseURLsearch,
-                getBaseURLget);
+                baseURLadd,
+                baseURLsearch,
+                baseURLget);
     }
 
-    public ContactService getServiceContactArrays() {
+    public ContactService getInMemoryContactService() {
         return contactService = new InMemoryContactService();
     }
+
 
 
 }

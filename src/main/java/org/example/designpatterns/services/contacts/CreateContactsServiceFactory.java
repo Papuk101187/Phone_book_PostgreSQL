@@ -11,12 +11,14 @@ public interface CreateContactsServiceFactory {
 
     public ContactService getContactServiceFile(String file);
 
+
     public ContactService getContactServiceApi(UsersService usersService,
                                                ObjectMapper objectMapper,
                                                HttpClient httpClient,
-                                               String getBaseURLadd,
-                                               String getBaseURLsearch,
-                                               String getBaseURLget);
+                                               String baseURLadd,
+                                               String baseURLsearch,
+                                               String baseURLget);
 
 
+    public ContactService getInMemoryContactService();
 }
