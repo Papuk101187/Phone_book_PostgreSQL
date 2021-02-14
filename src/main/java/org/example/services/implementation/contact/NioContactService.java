@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 
-public class CotactsNioServiceFileTEST implements ContactService {
+public class NioContactService implements ContactService {
 
     ContactParser contactParser = new ContactParser();
     ContactBuffers contactBuffers = new ContactBuffers();
