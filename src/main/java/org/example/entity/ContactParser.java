@@ -27,7 +27,7 @@ public class ContactParser {
         String value = contact.value;
         String name = contact.name;
 
-        return name + " [" + type + " :" + value + "],";
+        return name + " [" + type + " :" + value + "]";
 
     }
 

@@ -3,10 +3,12 @@ package org.example;
 import org.example.configuration.ApplicationGetPropertys;
 import org.example.configuration.ConfigLoader;
 import org.example.configuration.CreateService;
+import org.example.entity.ContactBuffers;
 import org.example.entity.User;
 import org.example.menu.PhoneBook;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
+import org.example.services.implementation.contact.CotactsNioServiceFileTEST;
 
 import java.io.IOException;
 
@@ -28,9 +30,19 @@ public class Main {
         ContactService contactService = createService.getContactservice(); // получаем сервис по контактам
         UsersService usersService = createService.getUsersService(); // получаем сервис по user
 
-        PhoneBook phoneBook = new PhoneBook(contactService, usersService, new User()); // наша телефонная книга
+        ContactService contactService1 = new CotactsNioServiceFileTEST();
+
+        PhoneBook phoneBook = new PhoneBook(contactService1, usersService, new User()); // наша телефонная книга
         phoneBook.start();
 
+
+//        ContactBuffers contactBuffers = new ContactBuffers();
+//        contactBuffers.readBuffer();
+//
+//        String a = "[oleg [email :vasia@i.ua],";
+//
+//        String b = a.substring(a.length()-1);
+//        System.out.println(b);
 
 
 
