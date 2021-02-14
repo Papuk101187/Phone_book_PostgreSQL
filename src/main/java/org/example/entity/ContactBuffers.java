@@ -34,7 +34,7 @@ public class ContactBuffers {
     }
 
 
-    private List<String> getArraycontact(Consumer<String> consumer) throws IOException {
+    public List<String> getArraycontact() throws IOException {
 
         List<String> list = new ArrayList<>();
 
@@ -47,13 +47,12 @@ public class ContactBuffers {
 
                 for (int i = 0; i < parts.length - 1; i++) {
                     list.add(parts[i]);
-                    consumer.accept(parts[i]);
                 }
                 stringBuffer = parts[parts.length - 1];
                 byteBuffer.clear();
-                consumer.accept(stringBuffer);
             }
         }
         return list;
     }
+
 }

@@ -1,4 +1,5 @@
 package org.example.services.implementation.contact;
+
 import org.example.entity.Contact;
 import org.example.entity.ContactBuffers;
 import org.example.entity.ContactParser;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Consumer;
 
 
 public class CotactsNioServiceFileTEST implements ContactService {
@@ -42,15 +44,20 @@ public class CotactsNioServiceFileTEST implements ContactService {
                 list.add(contact1);
             }
         }
-
-        System.out.println("list "+list);
-
         return list;
     }
 
     @Override
     public List<Contact> getAllcontact() throws IOException, InterruptedException {
-        return null;
+        List<String> arraycontact = contactBuffers.getArraycontact();
+        List<Contact> contacts = new ArrayList<>();
+
+        for (String s : arraycontact) {
+            Contact contact = contactParser.deserializationСontact(s);
+            contacts.add(contact);
+        }
+        return contacts;
+
     }
 
     @Override
