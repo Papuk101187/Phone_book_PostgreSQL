@@ -1,4 +1,4 @@
-package org.example.designpatterns.contacts.request;
+package org.example.designpatterns.designpatterns.dto.request;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 

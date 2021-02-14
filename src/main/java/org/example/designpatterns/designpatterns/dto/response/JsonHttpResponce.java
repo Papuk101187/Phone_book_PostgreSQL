@@ -1,7 +1,6 @@
-package org.example.designpatterns.contacts.response;
+package org.example.designpatterns.designpatterns.dto.response;
 
 import lombok.Data;
-import org.example.designpatterns.contacts.response.HttpResponseFactory;
 
 import java.io.IOException;
 import java.net.http.HttpClient;

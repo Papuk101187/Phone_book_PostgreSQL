@@ -1,8 +1,7 @@
-package org.example.designpatterns.contacts.request;
+package org.example.designpatterns.designpatterns.dto.request;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Data;
-import org.example.designpatterns.contacts.request.HttpRequestFactory;
 
 import java.net.URI;
 import java.net.http.HttpRequest;

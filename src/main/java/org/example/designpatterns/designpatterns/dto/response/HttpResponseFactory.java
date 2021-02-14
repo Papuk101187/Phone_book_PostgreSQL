@@ -1,4 +1,4 @@
-package org.example.designpatterns.contacts.response;
+package org.example.designpatterns.designpatterns.dto.response;
 
 import java.io.IOException;
 import java.net.http.HttpClient;

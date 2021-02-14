@@ -1,4 +1,4 @@
-package org.example.designpatterns.services.contacts;
+package org.example.designpatterns.designpatterns.createservice.contacts;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.services.ContactService;
