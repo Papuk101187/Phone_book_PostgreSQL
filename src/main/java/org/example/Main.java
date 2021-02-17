@@ -1,8 +1,11 @@
 package org.example;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.configuration.ApplicationGetPropertys;
 import org.example.configuration.ConfigLoader;
 import org.example.configuration.CreateService;
+import org.example.entity.BulderTools;
+import org.example.entity.Tools;
 import org.example.entity.User;
 import org.example.menu.PhoneBook;
 import org.example.services.ContactService;
@@ -10,14 +13,26 @@ import org.example.services.UsersService;
 import org.example.services.implementation.contact.NioContactService;
 
 import java.io.IOException;
+import java.net.http.HttpClient;
 
 public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-
-
         ConfigLoader configLoader = new ConfigLoader(); // загружает properties из файла
+
+        Tools tools = BulderTools.bulderTools.addToolsforHttpClient(HttpClient.newBuilder().build())
+                .addToolsforObjectMapper(new ObjectMapper())
+                .addToolsforConfig(configLoader).build();
+
+
+
+
+
+
+
+
+
         String profile = configLoader.getProfile(); // получаем профиль из системы
         String configFile = "app-"+profile+".properties"; // получаем имя файла
 
