@@ -29,6 +29,10 @@ public class Tools {
         tools.put("ConfigLoader",configLoader);
     }
 
+    public Map<String, Object> getTools(){
+        return tools;
+    }
+
 
 }
 

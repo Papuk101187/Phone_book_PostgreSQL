@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.configuration.ApplicationGetPropertys;
 import org.example.configuration.ConfigLoader;
 import org.example.configuration.CreateService;
+import org.example.designpatterns.designpatterns.createservice.fix.createapiservice.ApiСontactServiceFactory;
+import org.example.designpatterns.designpatterns.createservice.fix.createapiservice.ApiСontactServiceFactoryсlass;
 import org.example.entity.BulderTools;
 import org.example.entity.Tools;
 import org.example.entity.User;
@@ -28,6 +30,9 @@ public class Main {
                 .addToolsforConfig(configLoader).build();
         tools.packing(); // упаковуем
 
+
+        ApiСontactServiceFactory apiСontactServiceFactory =
+                new ApiСontactServiceFactoryсlass(tools.getTools());
 
 
 
