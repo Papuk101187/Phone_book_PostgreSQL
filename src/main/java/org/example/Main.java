@@ -28,11 +28,12 @@ public class Main {
                 .addToolsforHttpClient(HttpClient.newBuilder().build())
                 .addToolsforObjectMapper(new ObjectMapper())
                 .addToolsforConfig(configLoader).build();
-        tools.packing(); // упаковуем
+        tools.packing(); // упаковуем наши инструменты для передачи в фабрику
 
 
         ApiСontactServiceFactory apiСontactServiceFactory =
                 new ApiСontactServiceFactoryсlass(tools.getTools());
+
 
 
 

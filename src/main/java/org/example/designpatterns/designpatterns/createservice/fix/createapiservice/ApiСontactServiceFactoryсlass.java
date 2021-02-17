@@ -13,13 +13,14 @@ import java.util.Map;
 
 
 public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactory {
-    Map<String,Object> tools;
+    Map<String, Object> tools;
+
     public ApiСontactServiceFactoryсlass(Map<String, Object> tools) {
         this.tools = tools;
     }
 
     HttpClient httpClient = (HttpClient) tools.get("HttpClient");
-    ObjectMapper objectMapper  = (ObjectMapper) tools.get("ObjectMapper");
+    ObjectMapper objectMapper = (ObjectMapper) tools.get("ObjectMapper");
     ConfigLoader configLoader = (ConfigLoader) tools.get("ConfigLoader");
 
 
@@ -32,7 +33,6 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
         contactService = new ApiContactService()
         return contactService;
     }
-
 
 
 }
