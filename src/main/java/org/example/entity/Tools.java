@@ -14,7 +14,25 @@ import java.util.Properties;
 
 @Data
 public class Tools {
+
+    Map<String, Object>  tools = new HashMap<>();
+
+
     HttpClient httpClient;
     ObjectMapper objectMapper;
     ConfigLoader configLoader;
+
+
+    public void packing(){
+        tools.put("HttpClient",httpClient);
+        tools.put("ObjectMapper",objectMapper);
+        tools.put("ConfigLoader",configLoader);
+    }
+
+
 }
+
+
+
+
+

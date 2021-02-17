@@ -21,9 +21,11 @@ public class Main {
 
         ConfigLoader configLoader = new ConfigLoader(); // загружает properties из файла
 
-        Tools tools = BulderTools.bulderTools.addToolsforHttpClient(HttpClient.newBuilder().build())
+        Tools tools = BulderTools.bulderTools
+                .addToolsforHttpClient(HttpClient.newBuilder().build())
                 .addToolsforObjectMapper(new ObjectMapper())
                 .addToolsforConfig(configLoader).build();
+        tools.packing();
 
 
 
