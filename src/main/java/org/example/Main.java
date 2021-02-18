@@ -4,6 +4,7 @@ import org.example.designpatterns.designpatterns.facade.Application;
 import org.example.entity.User;
 import org.example.menu.PhoneBook;
 import org.example.services.ContactService;
+import org.example.services.UsersService;
 
 import java.io.IOException;
 
@@ -14,11 +15,11 @@ public class Main {
         Application application = new Application();
 
 
-        ContactService service = application.ContactService();
+        ContactService contactService = application.getContactService();
+        UsersService usersService = application.getUsersService();
 
 
-
-        PhoneBook phoneBook = new PhoneBook(contactService1, usersService, new User()); // наша телефонная книга
+        PhoneBook phoneBook = new PhoneBook(contactService, usersService, new User()); // наша телефонная книга
         phoneBook.start();
 
 

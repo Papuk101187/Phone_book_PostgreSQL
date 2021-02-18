@@ -15,6 +15,15 @@ import java.io.IOException;
 
 public class Application {
 
+
+    public ContactService getContactService() {
+        return contactService;
+    }
+
+    public UsersService getUsersService() {
+        return usersService;
+    }
+
     ContactService contactService;
     UsersService usersService;
 
@@ -23,6 +32,8 @@ public class Application {
     String profile = configLoader.getProfile(); // получаем профиль из системы
     String configFile = "app-" + profile + ".properties"; // получаем имя файла
     ApplicationGetPropertys properties; // единый класс с properties
+
+
 
 
     FileСontactServiceFactory fileСontactServiceFactory = new FileСontactServiceFactoryclass(properties);
@@ -39,7 +50,7 @@ public class Application {
 
 
 
-    public ContactService getContactService() {
+    public void createServices() {
         switch (properties.getWorkmode()) {
             case "file":
                 contactService = fileСontactServiceFactory.createContactService();
@@ -53,5 +64,5 @@ public class Application {
                 contactService = inMemoryContactServiceFactory.createContactService();
                 usersService = inMemoryContactServiceFactory.createUsersService();
         }
-        return null;}
+    }
 }
