@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.configuration.ConfigLoader;
 import org.example.designpatterns.designpatterns.facade.ApplicationFasad;
 import org.example.entity.User;
 import org.example.menu.PhoneBook;
@@ -12,8 +13,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
+
+
         ApplicationFasad applicationFasad = new ApplicationFasad(); // создали фасад под капотом
         // которого у нас находятся фабрики , которые создают наши сервиса ContactService и UsersService
+        applicationFasad.createConfiguration(); // создаём конфигурации из файла внутри фасада
         applicationFasad.createServices(); // создаём сервиса с помощью наших фабрик внутри фасада
 
         ContactService contactService = applicationFasad.getContactService(); // забираем уже готовый
@@ -25,5 +29,7 @@ public class Main {
         // добавляем их в нашу телефонную книгу
         phoneBook.start();
         //запускаем нашу книгу
+
+
     }
 }

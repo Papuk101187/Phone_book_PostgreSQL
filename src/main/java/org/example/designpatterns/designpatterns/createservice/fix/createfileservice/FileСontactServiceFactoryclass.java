@@ -38,9 +38,14 @@ public class FileСontactServiceFactoryclass implements FileСontactServiceFacto
 
     public UsersService createUsersService() {
 
-        return new FictiApiUserService(
-                applicationGetPropertys.getBaseURLregistration(),
-                applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+        if(usersService!=null){
+            return usersService;
+        }else {
+            return new ApiUserService(
+                    applicationGetPropertys.getBaseURLregistration(),
+                    applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+        }
+
 
     }
 }

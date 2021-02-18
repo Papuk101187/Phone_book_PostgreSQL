@@ -11,7 +11,10 @@ import org.example.designpatterns.designpatterns.createservice.fix.creatememoryc
 import org.example.services.ContactService;
 import org.example.services.UsersService;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Properties;
 
 public class ApplicationFasad {
 
@@ -26,17 +29,19 @@ public class ApplicationFasad {
 
     ContactService contactService;
     UsersService usersService;
+    Properties prop = new Properties();
 
 
     ConfigLoader configLoader = new ConfigLoader(); // загружает properties из файла
     String profile = configLoader.getProfile(); // получаем профиль из системы
     String configFile = "app-" + profile + ".properties"; // получаем имя файла
     ApplicationGetPropertys properties = new ApplicationGetPropertys();
+    ApplicationGetPropertys applicationGetPropertys = new ApplicationGetPropertys();
 
 
-    FileСontactServiceFactory fileСontactServiceFactory = new FileСontactServiceFactoryclass(properties);
-    ApiСontactServiceFactory apiСontactServiceFactory = new ApiСontactServiceFactoryсlass(properties);
-    InMemoryContactServiceFactory inMemoryContactServiceFactory = new InMemoryContactServiceFactoryclass(properties);
+    FileСontactServiceFactory fileСontactServiceFactory = new FileСontactServiceFactoryclass(applicationGetPropertys);
+    ApiСontactServiceFactory apiСontactServiceFactory = new ApiСontactServiceFactoryсlass(applicationGetPropertys);
+    InMemoryContactServiceFactory inMemoryContactServiceFactory = new InMemoryContactServiceFactoryclass(applicationGetPropertys);
 
     {
         try {
@@ -44,6 +49,23 @@ public class ApplicationFasad {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void createConfiguration() throws IOException {
+        {
+            System.out.println("-> createConfiguration");
+        }
+
+        FileInputStream fileInputStream = new FileInputStream(configFile);
+        prop.load(fileInputStream);
+        applicationGetPropertys.setBaseURLlogin(prop.getProperty("api.base-authorization"));
+        applicationGetPropertys.setBaseURLregistration(prop.getProperty("api.base-registration"));
+        applicationGetPropertys.setBaseURLadd(prop.getProperty("api.base-addcontact"));
+        applicationGetPropertys.setBaseURLsearch(prop.getProperty("api.base-searchcontact"));
+        applicationGetPropertys.setBaseURLget(prop.getProperty("api.base-getcontact"));
+        applicationGetPropertys.setWorkmode(prop.getProperty("app.service.workmode"));
+        applicationGetPropertys.setFile(prop.getProperty("file.path"));
+
     }
 
 
