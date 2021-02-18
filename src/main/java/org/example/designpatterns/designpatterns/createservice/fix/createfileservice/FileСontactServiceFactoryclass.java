@@ -8,10 +8,15 @@ import org.example.services.UsersService;
 import org.example.services.implementation.contact.ApiContactService;
 import org.example.services.implementation.contact.FileContactService;
 import org.example.services.implementation.user.ApiUserService;
+import org.example.services.implementation.user.FictiApiUserService;
 
 import java.net.http.HttpClient;
 
-public class FileСontactServiceFactoryclass implements FileСontactServiceFactory{
+public class FileСontactServiceFactoryclass implements FileСontactServiceFactory {
+
+    UsersService usersService;
+    ContactService contactService;
+
 
     public FileСontactServiceFactoryclass(ApplicationGetPropertys applicationGetPropertys) {
         this.applicationGetPropertys = applicationGetPropertys;
@@ -20,13 +25,22 @@ public class FileСontactServiceFactoryclass implements FileСontactServiceFacto
     ApplicationGetPropertys applicationGetPropertys;
 
 
-
     ObjectMapper objectMapper = new ObjectMapper();
     HttpClient httpClient = HttpClient.newBuilder().build();
 
 
     @Override
-    public ContactService createService() {
+    public ContactService createContactService() {
+
         return new FileContactService(applicationGetPropertys.getFile());
+    }
+
+
+    public UsersService createUsersService() {
+
+        return new FictiApiUserService(
+                applicationGetPropertys.getBaseURLregistration(),
+                applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+
     }
 }

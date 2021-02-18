@@ -15,6 +15,11 @@ import java.util.Map;
 
 public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactory {
 
+
+    UsersService usersService;
+    ContactService contactService;
+
+
     public ApiСontactServiceFactoryсlass(ApplicationGetPropertys applicationGetPropertys) {
         this.applicationGetPropertys = applicationGetPropertys;
     }
@@ -26,7 +31,7 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
 
 
     @Override
-    public ContactService createService() {
+    public ContactService createContactService() {
 
         UsersService usersService = new ApiUserService(
                 applicationGetPropertys.getBaseURLregistration(),
@@ -38,4 +43,14 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
                 applicationGetPropertys.getBaseURLsearch(),
                 applicationGetPropertys.getBaseURLadd());
     }
+
+
+    public UsersService createUsersService() {
+
+        return new ApiUserService(
+                applicationGetPropertys.getBaseURLregistration(),
+                applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+
+    }
+
 }

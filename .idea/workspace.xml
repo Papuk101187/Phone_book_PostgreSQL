@@ -11,9 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/contacts/CreateContactFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/contacts/CreateContactsServiceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configuration/CreateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactoryclass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactoryclass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/FictiApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/FictiApiUserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,22 +122,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1612898214993" />
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1613636647390">
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1613640370674">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613636647390" />
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613332674696">
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613640370674" />
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613639103287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1613332674696" />
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1613639103287" />
     <state x="455" y="235" width="458" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1612872008891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="455" y="235" width="458" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1612872008891" />
-    <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613322283120">
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613638894762">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="288" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613322283120" />
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613638894762" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613597090070">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

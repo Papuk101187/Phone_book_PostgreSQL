@@ -1,20 +1,45 @@
 package org.example.designpatterns.designpatterns.createservice.fix.creatememorycontactservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.configuration.ApplicationGetPropertys;
 import org.example.designpatterns.designpatterns.createservice.fix.createapiservice.ApiСontactServiceFactory;
 import org.example.services.ContactService;
+import org.example.services.UsersService;
+import org.example.services.implementation.contact.FileContactService;
 import org.example.services.implementation.contact.InMemoryContactService;
+import org.example.services.implementation.user.FictiApiUserService;
+
+import java.net.http.HttpClient;
 
 public class InMemoryContactServiceFactoryclass implements InMemoryContactServiceFactory{
 
-    ApplicationGetPropertys applicationGetPropertys;
+    UsersService usersService;
+    ContactService contactService;
+
 
     public InMemoryContactServiceFactoryclass(ApplicationGetPropertys applicationGetPropertys) {
         this.applicationGetPropertys = applicationGetPropertys;
     }
 
+    ApplicationGetPropertys applicationGetPropertys;
+
+
+    ObjectMapper objectMapper = new ObjectMapper();
+    HttpClient httpClient = HttpClient.newBuilder().build();
+
+
     @Override
-    public ContactService createService() {
-        return new InMemoryContactService();
+    public ContactService createContactService() {
+
+        return new FileContactService(applicationGetPropertys.getFile());
+    }
+
+
+    public UsersService createUsersService() {
+
+        return new FictiApiUserService(
+                applicationGetPropertys.getBaseURLregistration(),
+                applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+
     }
 }
