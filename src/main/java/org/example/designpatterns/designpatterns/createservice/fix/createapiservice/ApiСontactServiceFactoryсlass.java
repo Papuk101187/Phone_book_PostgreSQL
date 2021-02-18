@@ -37,7 +37,5 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
                 applicationGetPropertys.getBaseURLadd(),
                 applicationGetPropertys.getBaseURLsearch(),
                 applicationGetPropertys.getBaseURLadd());
-
     }
-
 }
