@@ -13,8 +13,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-
-
         ApplicationFasad applicationFasad = new ApplicationFasad(); // создали фасад под капотом
         // которого у нас находятся фабрики , которые создают наши сервиса ContactService и UsersService
         applicationFasad.createConfiguration(); // создаём конфигурации из файла внутри фасада
@@ -29,7 +27,6 @@ public class Main {
         // добавляем их в нашу телефонную книгу
         phoneBook.start();
         //запускаем нашу книгу
-
 
     }
 }

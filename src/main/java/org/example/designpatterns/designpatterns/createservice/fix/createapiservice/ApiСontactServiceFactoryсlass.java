@@ -33,10 +33,10 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
     @Override
     public ContactService createContactService() {
 
-
             usersService = new ApiUserService(
                     applicationGetPropertys.getBaseURLregistration(),
                     applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+
             contactService=new  ApiContactService(
                     usersService,
                     objectMapper, httpClient,
@@ -49,15 +49,12 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
 
     public UsersService createUsersService() {
 
-        if(usersService!=null){
+        if (usersService != null) {
             return usersService;
-        }else {
+        } else {
             return new ApiUserService(
                     applicationGetPropertys.getBaseURLregistration(),
                     applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
         }
-
-
     }
-
 }
