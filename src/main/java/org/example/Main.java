@@ -21,7 +21,6 @@ public class Main {
         UsersService usersService = applicationFasad.getUsersService();// забираем уже готовый
         //сервис для работы с users
 
-
         PhoneBook phoneBook = new PhoneBook(contactService, usersService, new User());
         // добавляем их в нашу телефонную книгу
         phoneBook.start();

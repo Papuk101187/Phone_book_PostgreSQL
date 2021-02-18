@@ -34,7 +34,6 @@ public class ApplicationFasad {
     ApplicationGetPropertys properties = new ApplicationGetPropertys();
 
 
-
     FileСontactServiceFactory fileСontactServiceFactory = new FileСontactServiceFactoryclass(properties);
     ApiСontactServiceFactory apiСontactServiceFactory = new ApiСontactServiceFactoryсlass(properties);
     InMemoryContactServiceFactory inMemoryContactServiceFactory = new InMemoryContactServiceFactoryclass(properties);
@@ -46,7 +45,6 @@ public class ApplicationFasad {
             e.printStackTrace();
         }
     }
-
 
 
     public void createServices() {
@@ -64,6 +62,4 @@ public class ApplicationFasad {
                 usersService = inMemoryContactServiceFactory.createUsersService();
         }
     }
-
-
 }
