@@ -89,4 +89,10 @@ public class ApiUserService implements UsersService {
         return token;
     }
 
+
+    @Override
+    public boolean checkingService() {
+        return true;
+    }
+
 }

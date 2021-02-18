@@ -45,7 +45,7 @@ public class PhoneBook {
 
         while (true) {
 
-            System.out.println("PhoneBook.runProgram");
+            System.out.println(contactService.checkingService());
 
             if (contactService.checkingService() == true) {
                 user = getDataUser(user);

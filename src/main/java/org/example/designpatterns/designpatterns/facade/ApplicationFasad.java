@@ -13,7 +13,7 @@ import org.example.services.UsersService;
 
 import java.io.IOException;
 
-public class Application {
+public class ApplicationFasad {
 
 
     public ContactService getContactService() {
@@ -31,8 +31,7 @@ public class Application {
     ConfigLoader configLoader = new ConfigLoader(); // загружает properties из файла
     String profile = configLoader.getProfile(); // получаем профиль из системы
     String configFile = "app-" + profile + ".properties"; // получаем имя файла
-    ApplicationGetPropertys properties; // единый класс с properties
-
+    ApplicationGetPropertys properties = new ApplicationGetPropertys();
 
 
 
@@ -65,4 +64,6 @@ public class Application {
                 usersService = inMemoryContactServiceFactory.createUsersService();
         }
     }
+
+
 }

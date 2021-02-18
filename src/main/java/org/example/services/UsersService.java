@@ -10,5 +10,6 @@ public interface UsersService {
     String getToken();
     String register(User user) throws IOException, InterruptedException;
     String login(User user) throws IOException, InterruptedException;
+    public boolean checkingService();
 
 }

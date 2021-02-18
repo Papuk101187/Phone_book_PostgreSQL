@@ -11,8 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/ApplicationFasad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/FictiApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/FictiApiUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/configuration/CreateService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,10 +123,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1612898214993" />
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1613641085427">
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1613642922840">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613641085427" />
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613642922840" />
     <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613639103287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -127,10 +135,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="455" y="235" width="458" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1612872008891" />
-    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613638894762">
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613642636044">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613638894762" />
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1613642636044" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613597090070">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -139,22 +147,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1612859351265" />
-    <state width="1323" height="326" key="GridCell.Tab.0.bottom" timestamp="1613330833006">
+    <state width="661" height="50" key="GridCell.Tab.0.bottom" timestamp="1613643441641">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="326" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613330833006" />
-    <state width="1323" height="326" key="GridCell.Tab.0.center" timestamp="1613330833006">
+    <state width="661" height="50" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1613643441641" />
+    <state width="661" height="50" key="GridCell.Tab.0.center" timestamp="1613643441640">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="326" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613330833006" />
-    <state width="1323" height="326" key="GridCell.Tab.0.left" timestamp="1613330833006">
+    <state width="661" height="50" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1613643441640" />
+    <state width="661" height="50" key="GridCell.Tab.0.left" timestamp="1613643441640">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="326" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613330833006" />
-    <state width="1323" height="326" key="GridCell.Tab.0.right" timestamp="1613330833006">
+    <state width="661" height="50" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1613643441640" />
+    <state width="661" height="50" key="GridCell.Tab.0.right" timestamp="1613643441641">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="326" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613330833006" />
+    <state width="661" height="50" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1613643441641" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612818554160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

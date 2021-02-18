@@ -44,4 +44,9 @@ public class FictiApiUserService implements UsersService {
     public String login(User user) throws IOException, InterruptedException {
         return "not supported";
     }
+
+    @Override
+    public boolean checkingService() {
+        return false;
+    }
 }
