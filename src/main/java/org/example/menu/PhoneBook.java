@@ -1,4 +1,5 @@
 package org.example.menu;
+
 import org.example.entity.User;
 import org.example.menu.points.AddContactMenuitem;
 import org.example.menu.points.ExistMenuitem;
@@ -6,6 +7,7 @@ import org.example.menu.points.GetAllContactMenuitem;
 import org.example.menu.points.SearchnameMenuitem;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -44,9 +46,6 @@ public class PhoneBook {
 
 
         while (true) {
-
-            System.out.println(contactService.checkingService());
-
             if (contactService.checkingService() == true) {
                 user = getDataUser(user);
                 if (usersService.login(user) == null) {
@@ -55,11 +54,12 @@ public class PhoneBook {
                     user = getDataUser(user);
                     status = usersService.register(user);
                     System.out.println(status);
-                }{
+                }
+                {
                     showMenu();
                 }
 
-            }else {
+            } else {
                 showMenu();
             }
 
@@ -111,6 +111,4 @@ public class PhoneBook {
     public void start() throws IOException, InterruptedException {
         runProgram();
     }
-
-
 }

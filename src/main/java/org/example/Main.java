@@ -12,16 +12,19 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        ApplicationFasad applicationFasad = new ApplicationFasad();
-        applicationFasad.createServices();
+        ApplicationFasad applicationFasad = new ApplicationFasad(); // создали фасад под капотом
+        // которого у нас находятся фабрики , которые создают наши сервиса ContactService и UsersService
+        applicationFasad.createServices(); // создаём сервиса с помощью наших фабрик внутри фасада
 
-        ContactService contactService = applicationFasad.getContactService();
-        UsersService usersService = applicationFasad.getUsersService();
+        ContactService contactService = applicationFasad.getContactService(); // забираем уже готовый
+        //сервис для работы с контактами
+        UsersService usersService = applicationFasad.getUsersService();// забираем уже готовый
+        //сервис для работы с users
 
 
-        PhoneBook phoneBook = new PhoneBook(contactService, usersService, new User()); // наша телефонная книга
+        PhoneBook phoneBook = new PhoneBook(contactService, usersService, new User());
+        // добавляем их в нашу телефонную книгу
         phoneBook.start();
-
+        //запускаем нашу книгу
     }
-
 }
