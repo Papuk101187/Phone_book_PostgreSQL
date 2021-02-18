@@ -28,6 +28,8 @@ public class Main {
                 = new ApiСontactServiceFactoryсlass(properties);
 
 
+
+
         CreateService createService = new CreateService(properties); // создаём сервис по нашим properties
         createService.BuildService(); // строим сервис
 
