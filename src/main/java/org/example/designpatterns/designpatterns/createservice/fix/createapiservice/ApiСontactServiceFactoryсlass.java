@@ -33,28 +33,24 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
     @Override
     public ContactService createContactService() {
 
-            usersService = new ApiUserService(
-                    applicationGetPropertys.getBaseURLregistration(),
-                    applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
+        usersService = createUsersService();
 
-            contactService=new  ApiContactService(
-                    usersService,
-                    objectMapper, httpClient,
-                    applicationGetPropertys.getBaseURLadd(),
-                    applicationGetPropertys.getBaseURLsearch(),
-                    applicationGetPropertys.getBaseURLadd());
-            return contactService;
+        contactService = new ApiContactService(
+                usersService,
+                objectMapper, httpClient,
+                applicationGetPropertys.getBaseURLadd(),
+                applicationGetPropertys.getBaseURLsearch(),
+                applicationGetPropertys.getBaseURLadd());
+        return contactService;
+
     }
 
-
+    @Override
     public UsersService createUsersService() {
 
-        if (usersService != null) {
-            return usersService;
-        } else {
-            return new ApiUserService(
-                    applicationGetPropertys.getBaseURLregistration(),
-                    applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
-        }
+        return new ApiUserService(
+                applicationGetPropertys.getBaseURLregistration(),
+                applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
     }
 }
+

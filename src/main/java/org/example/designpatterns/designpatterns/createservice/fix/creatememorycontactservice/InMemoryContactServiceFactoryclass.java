@@ -32,7 +32,7 @@ public class InMemoryContactServiceFactoryclass implements InMemoryContactServic
     @Override
     public ContactService createContactService() {
 
-        return new FileContactService(applicationGetPropertys.getFile());
+        return new InMemoryContactService();
     }
 
 
@@ -41,7 +41,7 @@ public class InMemoryContactServiceFactoryclass implements InMemoryContactServic
         if(usersService!=null){
             return usersService;
         }else {
-            return new ApiUserService(
+            return new FictiApiUserService(
                     applicationGetPropertys.getBaseURLregistration(),
                     applicationGetPropertys.getBaseURLlogin(), objectMapper, httpClient);
         }

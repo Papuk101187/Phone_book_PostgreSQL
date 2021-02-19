@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public interface ApiСontactServiceFactory <T>{
 
     ContactService createContactService();
-    UsersService createUsersService();
+     UsersService createUsersService();
 
 
 
