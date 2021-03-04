@@ -70,7 +70,6 @@ public class ApiUserService implements UsersService {
 
         User user1 = user;
 
-
         ObjectMapper objectMapper =new ObjectMapper();
         String uze = objectMapper.writeValueAsString(user1);
 
@@ -88,6 +87,8 @@ public class ApiUserService implements UsersService {
         token =tokenResponse.token;
         return token;
     }
+
+
 
 
     @Override

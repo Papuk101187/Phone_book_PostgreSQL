@@ -35,7 +35,6 @@ public class AddContactMenuitem implements MenuItem {
         String status = service.add(contact);
         System.out.println(status);
 
-
         }
 
 
