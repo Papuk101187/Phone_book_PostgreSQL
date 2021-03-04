@@ -11,12 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBookCOPY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/DataBaseContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/database/Postgres.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/points/AddContactMenuitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/points/AddContactMenuitem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +54,20 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Олег\IdeaProjects\PhoneBooknew\src\main\java\org\example\designpatterns\designpatterns\createservice\fix\ApiContactService\createfileservice" />
-      <recent name="C:\Users\Олег\IdeaProjects\PhoneBooknew\src\main\java\org\example\entity" />
-      <recent name="C:\Users\Олег\IdeaProjects\PhoneBooknew\src\main\java\org\example\services\implementation\contact" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.menu" />
+      <recent name="org.example.entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.menu" />
       <recent name="org.example.services.implementation.contact" />
       <recent name="org.example.configuration" />
       <recent name="org.example.designpatterns.services.contacts" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.example.menu" />
-      <recent name="org.example.entity" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Олег\IdeaProjects\PhoneBooknew\src\main\java\org\example\designpatterns\designpatterns\createservice\fix\ApiContactService\createfileservice" />
+      <recent name="C:\Users\Олег\IdeaProjects\PhoneBooknew\src\main\java\org\example\entity" />
+      <recent name="C:\Users\Олег\IdeaProjects\PhoneBooknew\src\main\java\org\example\services\implementation\contact" />
     </key>
   </component>
   <component name="RunManager">
@@ -119,10 +121,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1613679004048" />
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1613642922840">
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1614894844958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1613642922840" />
+    <state x="488" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614894844958" />
     <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613846666511">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -147,10 +149,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="533" y="242" key="DBNavigator.ConnectionAuthenticationDialog/0.0.1366.728@0.0.1366.728" timestamp="1614853920411" />
-    <state x="459" y="175" key="DBNavigator.ConnectionInfoDialog" timestamp="1614854841654">
+    <state x="459" y="175" key="DBNavigator.ConnectionInfoDialog" timestamp="1614893900726">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="459" y="175" key="DBNavigator.ConnectionInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1614854841654" />
+    <state x="459" y="175" key="DBNavigator.ConnectionInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1614893900726" />
     <state x="413" y="286" key="DBNavigator.CreateRenameConsoleDialog" timestamp="1614854237446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -159,30 +161,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="79" key="DBNavigator.DatasetFilterDialog/0.0.1366.728@0.0.1366.728" timestamp="1614854349289" />
-    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog" timestamp="1614854847083">
+    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog" timestamp="1614893927524">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog/0.0.1366.728@0.0.1366.728" timestamp="1614854847083" />
+    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog/0.0.1366.728@0.0.1366.728" timestamp="1614893927524" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1614110310616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614110310616" />
-    <state width="1323" height="243" key="GridCell.Tab.0.bottom" timestamp="1614854218714">
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1614894414473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="243" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614854218714" />
-    <state width="1323" height="243" key="GridCell.Tab.0.center" timestamp="1614854218714">
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614894414473" />
+    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1614894414473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="243" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614854218714" />
-    <state width="1323" height="243" key="GridCell.Tab.0.left" timestamp="1614854218714">
+    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614894414473" />
+    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1614894414473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="243" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614854218714" />
-    <state width="1323" height="243" key="GridCell.Tab.0.right" timestamp="1614854218714">
+    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614894414473" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1614894414473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="243" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614854218714" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614894414473" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612818554160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
