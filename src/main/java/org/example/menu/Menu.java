@@ -4,6 +4,7 @@ import org.example.entity.Tokentime;
 import org.example.menu.MenuItem;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class Menu {
 
 
 
-    public boolean starting() throws IOException, InterruptedException {
+    public boolean starting() throws IOException, InterruptedException, SQLException {
 
         getText(); // выводим текст для пользователя
 

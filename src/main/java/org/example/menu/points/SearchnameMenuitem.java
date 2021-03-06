@@ -12,11 +12,10 @@ import java.io.InputStreamReader;
 public class SearchnameMenuitem implements MenuItem {
 
     ContactService service;
+    User user;
 
     public SearchnameMenuitem(ContactService contactService) {
-
         this.service=contactService;
-
     }
 
     @Override

@@ -1,14 +1,18 @@
 package org.example.services.implementation.contact;
 
 import org.example.entity.Contact;
+import org.example.entity.User;
 import org.example.services.ContactService;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class InMemoryContactService implements ContactService {
 
     List<Contact> contacts = new ArrayList<>();
+    User user;
 
 
     @Override
@@ -50,8 +54,13 @@ public class InMemoryContactService implements ContactService {
     }
 
     @Override
-    public boolean checkingService() {
-        return false;
+    public String checkingService() {
+        return "InMemoryContactService";
+    }
+
+    @Override
+    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+        this.user=user;
     }
 
 

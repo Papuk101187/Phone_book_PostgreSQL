@@ -10,7 +10,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.time.Duration;
 import java.time.LocalDateTime;
 
 
@@ -68,6 +67,8 @@ public class ApiUserService implements UsersService {
     @Override
     public String login(User user) throws IOException, InterruptedException {
 
+        System.out.println("ApiUserService.login");
+
         User user1 = user;
 
         ObjectMapper objectMapper =new ObjectMapper();
@@ -92,8 +93,8 @@ public class ApiUserService implements UsersService {
 
 
     @Override
-    public boolean checkingService() {
-        return true;
+    public String checkingService() {
+        return "ApiUserService";
     }
 
 }

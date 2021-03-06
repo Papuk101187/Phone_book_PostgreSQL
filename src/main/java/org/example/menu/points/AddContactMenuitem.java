@@ -9,17 +9,19 @@ import org.example.services.UsersService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 public class AddContactMenuitem implements MenuItem {
 
     ContactService service;
+
 
     public AddContactMenuitem(ContactService contactService) {
         this.service=contactService;
     }
 
     @Override
-    public void doAction() throws IOException, InterruptedException {
+    public void doAction() throws IOException, InterruptedException, SQLException {
 
         System.out.println("Введите type контакта [пример email]");
         BufferedReader t = new BufferedReader(new InputStreamReader(System.in)); //

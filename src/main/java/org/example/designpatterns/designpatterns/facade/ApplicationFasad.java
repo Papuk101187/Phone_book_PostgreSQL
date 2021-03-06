@@ -8,11 +8,13 @@ import org.example.designpatterns.designpatterns.createservice.fix.createfileser
 import org.example.designpatterns.designpatterns.createservice.fix.createfileservice.FileСontactServiceFactoryclass;
 import org.example.designpatterns.designpatterns.createservice.fix.creatememorycontactservice.InMemoryContactServiceFactory;
 import org.example.designpatterns.designpatterns.createservice.fix.creatememorycontactservice.InMemoryContactServiceFactoryclass;
+import org.example.designpatterns.designpatterns.createservice.fix.database.DataBaseContactServiceFactory;
+import org.example.designpatterns.designpatterns.createservice.fix.database.DataBaseContactServiceFactoryclass;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
+import org.example.services.implementation.user.UserServiceDataBase;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -29,6 +31,7 @@ public class ApplicationFasad {
 
     ContactService contactService;
     UsersService usersService;
+    UserServiceDataBase userServiceDataBase;
     Properties prop = new Properties();
 
 
@@ -42,6 +45,8 @@ public class ApplicationFasad {
     FileСontactServiceFactory fileСontactServiceFactory = new FileСontactServiceFactoryclass(applicationGetPropertys);
     ApiСontactServiceFactory apiСontactServiceFactory = new ApiСontactServiceFactoryсlass(applicationGetPropertys);
     InMemoryContactServiceFactory inMemoryContactServiceFactory = new InMemoryContactServiceFactoryclass(applicationGetPropertys);
+    DataBaseContactServiceFactory dataBaseContactServiceFactory = new DataBaseContactServiceFactoryclass(applicationGetPropertys);
+
 
     {
         try {
@@ -82,6 +87,9 @@ public class ApplicationFasad {
             case "memory":
                 contactService = inMemoryContactServiceFactory.createContactService();
                 usersService = inMemoryContactServiceFactory.createUsersService();
+            case "database":
+                contactService = dataBaseContactServiceFactory.createContactService();
+                usersService = dataBaseContactServiceFactory.createUsersService();
         }
     }
 }

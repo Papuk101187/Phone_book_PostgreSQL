@@ -7,65 +7,66 @@ import org.example.menu.points.GetAllContactMenuitem;
 import org.example.menu.points.SearchnameMenuitem;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
-import org.example.services.implementation.database.Postgres;
 
+import javax.sql.DataSource;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class PhoneBookCOPY {
 
 
     List<MenuItem> lists = new ArrayList();
     ContactService contactService;
-    UsersService usersService;
     User user;
+    ArrayList<String> usersfordatabase = new ArrayList<>();
+    UsersService usersService;
     String status;
 
-    Postgres postgres = new Postgres();
-    ResultSet resultSet;
+    DataSource source;
+    String userbas = "postgres";
+    String password = "10n11m87g";
+    String dsn = "jdbc:postgresql://localhost:5432/telefonbooks";
 
-    public PhoneBookCOPY(ContactService contactServ, UsersService usersService, User use) throws IOException {
+
+    public PhoneBookCOPY(ContactService contactService, UsersService usersService, User use) throws IOException, SQLException, InterruptedException {
         this.user = use;
-        this.contactService = contactServ;
+        this.contactService = contactService;
         this.usersService = usersService;
+        contactService.setUser(user);
         lists.add(new AddContactMenuitem(contactService));
         lists.add(new SearchnameMenuitem(contactService));
         lists.add(new GetAllContactMenuitem(contactService));
         lists.add(new ExistMenuitem(contactService));
     }
 
-
-    private void showMenu() throws IOException, InterruptedException {
+    private void showMenu() throws IOException, InterruptedException, SQLException {
         Menu menu = new Menu(lists);
         menu.starting();
 
     }
 
-
     private void runProgram() throws IOException, InterruptedException, SQLException {
 
 
+        Connection connection = DriverManager.getConnection(dsn, userbas, password);
+
+
         while (true) {
-            if (contactService.checkingService() == true) {
+
+            if (contactService.checkingService() == "DataBaseContactService") {
                 user = getDataUser(user);
-
-                postgres.create();
-                resultSet = postgres.getStatement().executeQuery("SELECT name_user FROM users");
-
-                while (resultSet.next()) {
-                    if(user.login!=resultSet.getString("name_user")){
-                        // НУЖНО ДОБАВИТЬ ЮЗЕРА
-                    }
+                if (usersService.login(user) == null) {
+                    System.out.println("Логин отсутсвет");
+                    System.out.println("Просим ввести данные для регистрации");
+                    user = getDataUser(user);
+                    status = usersService.register(user);
+                    System.out.println(status);
                 }
-                // ПРОДОЛЖАЕМ РАБОТАТЬ
-
-
                 {
                     showMenu();
                 }
@@ -76,7 +77,13 @@ public class PhoneBookCOPY {
 
         }
 
+
+
     }
+
+
+
+
 
 
     private User getDataUser(User user) throws IOException {
@@ -98,7 +105,6 @@ public class PhoneBookCOPY {
     private void getText(String s) {
         System.out.println(s);
     }
-
 
     private String getDate() throws IOException {
         System.out.println("Введите Вашу дату рождения в формате [yyyy-MM-dd] ");

@@ -1,40 +1,46 @@
 //package org.example.menu;
-//
 //import org.example.entity.User;
 //import org.example.menu.points.AddContactMenuitem;
 //import org.example.menu.points.ExistMenuitem;
 //import org.example.menu.points.GetAllContactMenuitem;
 //import org.example.menu.points.SearchnameMenuitem;
 //import org.example.services.ContactService;
-//import org.example.services.UsersService;
+//import org.example.services.UsersServiceApi;
 //
+//import javax.sql.DataSource;
 //import java.io.BufferedReader;
 //import java.io.IOException;
 //import java.io.InputStreamReader;
-//import java.sql.SQLException;
+//import java.sql.*;
 //import java.util.ArrayList;
 //import java.util.List;
 //
-//public class PhoneBook {
+//
+//public class PhoneBookCOP1 {
 //
 //
 //    List<MenuItem> lists = new ArrayList();
 //    ContactService contactService;
-//    UsersService usersService;
+//    UsersServiceApi usersServiceApi;
 //    User user;
-//    String status;
+//    ArrayList<String> usersfordatabase = new ArrayList<>();
+//
+//    DataSource source;
+//    String userbas = "postgres";
+//    String password = "10n11m87g";
+//    String dsn = "jdbc:postgresql://localhost:5432/telefonbooks";
 //
 //
-//    public PhoneBook(ContactService contactServ, UsersService usersService, User use) throws IOException {
+//
+//    public PhoneBookCOP1(ContactService contactServ, UsersServiceApi usersServiceApi, User use) throws IOException, SQLException {
 //        this.user = use;
 //        this.contactService = contactServ;
-//        this.usersService = usersService;
+//        this.usersServiceApi = usersServiceApi;
 //        lists.add(new AddContactMenuitem(contactService));
 //        lists.add(new SearchnameMenuitem(contactService));
 //        lists.add(new GetAllContactMenuitem(contactService));
 //        lists.add(new ExistMenuitem(contactService));
 //    }
-//
 //
 //    private void showMenu() throws IOException, InterruptedException {
 //        Menu menu = new Menu(lists);
@@ -45,28 +51,46 @@
 //
 //    private void runProgram() throws IOException, InterruptedException, SQLException {
 //
+//        user = getDataUser(user);
+//        Connection connection = DriverManager.getConnection(dsn, userbas, password);
+//
+//
 //
 //        while (true) {
-//            if (contactService.checkingService() == "true") {
-//                user = getDataUser(user);
-//                if (usersService.login(user) == null) {
-//                    System.out.println("Логин отсутсвует");
-//                    System.out.println("Просим ввести данные для регистрации");
-//                    user = getDataUser(user);
-//                    status = usersService.register(user);
-//                    System.out.println(status);
+//
+//            String login = null;
+//            String password = null;
+//            String databorn = null;
+//
+//            if (contactService.checkingService() == "DataBaseContactService") {
+//
+//                PreparedStatement statement1 = connection.prepareStatement(
+//                        "SELECT login_user,login_password,date_born FROM users WHERE login_user=?;");
+//                statement1.setString(1, user.getLogin());
+//
+//                ResultSet resultSet = statement1.executeQuery();
+//
+//                while (resultSet.next()) {
+//                    login = resultSet.getString("login_user");
+//                    password = resultSet.getString("login_password");
+//                    databorn = resultSet.getString("date_born");
 //                }
-//                {
-//                    showMenu();
+//                if (login.equals(user.getLogin()) && password.equals(user.getPassword()) && databorn.equals(user.getDate_born())) {
+//                    System.out.println("Данные совпадают");
+//                } else {
+//                    String sql = "INSERT INTO users (login_user, login_password, date_born) Values (?, ? ,?)";
+//                    PreparedStatement preparedStatement = connection.prepareStatement(sql);
+//                    preparedStatement.setString(1, user.getLogin());
+//                    preparedStatement.setString(2, user.getPassword());
+//                    preparedStatement.setString(3, user.getDate_born());
+//                    preparedStatement.executeUpdate();
+//                    break;
 //                }
 //
-//            } else {
-//                showMenu();
-//            }
 //
 //        }
 //
-//    }
+//    }}
 //
 //
 //    private User getDataUser(User user) throws IOException {
@@ -89,7 +113,6 @@
 //        System.out.println(s);
 //    }
 //
-//
 //    private String getDate() throws IOException {
 //        System.out.println("Введите Вашу дату рождения в формате [yyyy-MM-dd] ");
 //        BufferedReader dat = new BufferedReader(new InputStreamReader(System.in));
@@ -109,7 +132,7 @@
 //        return log.readLine();
 //    }
 //
-//    public void start() throws IOException, InterruptedException {
+//    public void start() throws IOException, InterruptedException, SQLException {
 //        runProgram();
 //    }
 //}

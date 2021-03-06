@@ -20,9 +20,9 @@ public class FictiApiUserService implements UsersService {
     private boolean Y;
 
     public FictiApiUserService(String baseURLregistra,
-                          String baseURLlo,
-                          ObjectMapper objectMap,
-                          HttpClient client) {
+                               String baseURLlo,
+                               ObjectMapper objectMap,
+                               HttpClient client) {
         this.baseURLregistration=baseURLregistra;
         this.baseURLlogin=baseURLlo;
         this.objectMapper=objectMap;
@@ -46,7 +46,7 @@ public class FictiApiUserService implements UsersService {
     }
 
     @Override
-    public boolean checkingService() {
-        return false;
+    public String checkingService() {
+        return "FictiApiUserService";
     }
 }

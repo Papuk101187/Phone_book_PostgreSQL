@@ -6,6 +6,7 @@ import org.example.designpatterns.designpatterns.dto.request.JsonHttpRequestFact
 import org.example.designpatterns.designpatterns.dto.response.HttpResponseFactory;
 import org.example.designpatterns.designpatterns.dto.response.JsonHttpResponce;
 import org.example.entity.Contact;
+import org.example.entity.User;
 import org.example.services.ContactService;
 import org.example.services.UsersService;
 import org.example.services.implementation.dto.RequestContactName;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.sql.SQLException;
 import java.util.List;
 
 public class ApiContactService implements ContactService {
@@ -24,6 +26,7 @@ public class ApiContactService implements ContactService {
     public String urladd;
     public String urlget;
     public String urlsearch;
+    User user;
 
     HttpClient httpClie;
     boolean check = false;
@@ -31,8 +34,13 @@ public class ApiContactService implements ContactService {
     HttpRequestFactory jsonHttpRequestFactory = new JsonHttpRequestFactory();
     HttpResponseFactory jsonHttpResponce = new JsonHttpResponce();
 
-    public boolean checkingService() {
-        return check;
+    public String checkingService() {
+        return "ApiContactService";
+    }
+
+    @Override
+    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+        this.user=user;
     }
 
     public ApiContactService(UsersService usersService,

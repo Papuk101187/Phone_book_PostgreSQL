@@ -10,8 +10,10 @@ import java.io.IOException;
 public class ExistMenuitem implements MenuItem {
 
     ContactService service;
+    User user;
 
     public ExistMenuitem(ContactService contactService) {
+        this.service=contactService;
     }
 
 

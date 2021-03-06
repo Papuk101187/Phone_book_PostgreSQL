@@ -6,11 +6,15 @@ import org.example.entity.User;
 import org.example.services.ContactService;
 
 import java.io.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class FileContactService implements ContactService {
+
+    User user;
+
 
     public FileContactService(String inputFileName) {
         this.inputFileName = inputFileName;
@@ -69,8 +73,13 @@ public class FileContactService implements ContactService {
     }
 
     @Override
-    public boolean checkingService() {
-        return false;
+    public String checkingService() {
+        return "FileContactService";
+    }
+
+    @Override
+    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+        this.user=user;
     }
 
 

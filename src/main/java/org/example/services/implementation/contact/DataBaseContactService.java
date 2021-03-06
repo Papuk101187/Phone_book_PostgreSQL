@@ -1,67 +1,64 @@
-//package org.example.services.implementation.contact;
-//
-//import com.fasterxml.jackson.databind.ObjectMapper;
-//import org.example.designpatterns.designpatterns.dto.request.HttpRequestFactory;
-//import org.example.designpatterns.designpatterns.dto.request.JsonHttpRequestFactory;
-//import org.example.designpatterns.designpatterns.dto.response.HttpResponseFactory;
-//import org.example.designpatterns.designpatterns.dto.response.JsonHttpResponce;
-//import org.example.entity.Contact;
-//import org.example.services.ContactService;
-//import org.example.services.UsersService;
-//import org.example.services.implementation.database.Postgres;
-//import org.example.services.implementation.dto.RequestContactName;
-//import org.example.services.implementation.dto.ResponceContacts;
-//
-//import java.io.IOException;
-//import java.net.http.HttpClient;
-//import java.net.http.HttpRequest;
-//import java.net.http.HttpResponse;
-//import java.util.List;
-//
-//public class DataBaseContactService implements ContactService {
-//
-//    UsersService usersServic;
-//    ObjectMapper objectMapp;
-//    public String urladd;
-//    public String urlget;
-//    public String urlsearch;
-//
-//    HttpClient httpClie;
-//    boolean check = false;
-//
-//
-//
-//    public boolean checkingService() {
-//        return check;
-//    }
-//
-//    public DataBaseContactService(UsersService usersService,
-//                                  ObjectMapper objectMapper,
-//                                  HttpClient client,
-//                                  String urladdcontact,
-//                                  String urlsearchcontact,
-//                                  String urlget) {
-//        this.usersServic = usersService;
-//        this.check = true;
-//        this.objectMapp = objectMapper;
-//        this.httpClie = client;
-//        this.urladd = urladdcontact;
-//        this.urlsearch = urlsearchcontact;
-//        this.urlget = urlget;
-//    }
-//
-//    public String add(Contact contact) throws IOException, InterruptedException {
-//
-//
-//    }
-//
-//    public List<Contact> searchContact(String name) throws IOException, InterruptedException {
-//
-//
-//    }
-//
-//    public List<Contact> getAllcontact() throws IOException, InterruptedException {
-//
-//
-//    }
-//}
+package org.example.services.implementation.contact;
+
+import org.example.entity.Contact;
+import org.example.entity.User;
+import org.example.services.ContactService;
+import org.example.services.UsersService;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+public class DataBaseContactService implements ContactService {
+
+    String userbas = "postgres";
+    String password = "10n11m87g";
+    String dsn = "jdbc:postgresql://localhost:5432/telefonbooks";
+    UsersService usersService;
+    User user;
+
+
+    public String checkingService() {
+        return "DataBaseContactService";
+    }
+
+    @Override
+    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+        this.user=user;
+    }
+
+
+    public String add(Contact contact) throws IOException, InterruptedException, SQLException {
+
+        Connection connection = DriverManager.getConnection(dsn, userbas, password);
+        String sql = "INSERT INTO contacts (name_contact,type_contact,value_contact,id_user)" +
+                " VALUES ('Contact№1 ','Email','oleg.privatbank.ua',(SELECT id_user FROM users WHERE login_user=?))";
+
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, user.getLogin());
+        preparedStatement.executeUpdate();
+
+        return "Контакт в базу данных добавлен";
+    }
+
+
+    public List<Contact> searchContact(String name) throws IOException, InterruptedException {
+
+
+        System.out.println("DataBaseContactService.searchContact");
+        return null;
+    }
+
+
+    public List<Contact> getAllcontact() throws IOException, InterruptedException {
+        System.out.println("DataBaseContactService.getAllcontact");
+
+        return null;
+
+    }
+
+
+}
