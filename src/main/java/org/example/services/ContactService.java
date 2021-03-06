@@ -10,8 +10,8 @@ import java.util.List;
 public interface ContactService {
 
     String add (Contact contact) throws IOException, InterruptedException, SQLException;
-    List<Contact> searchContact(String name)throws IOException, InterruptedException;
-    List<Contact> getAllcontact() throws IOException, InterruptedException;
+    List<Contact> searchContact(String name) throws IOException, InterruptedException, SQLException;
+    List<Contact> getAllcontact() throws IOException, InterruptedException, SQLException;
     public String checkingService();
     void setUser (User user) throws IOException, InterruptedException, SQLException;
 

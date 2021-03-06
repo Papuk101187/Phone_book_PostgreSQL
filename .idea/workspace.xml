@@ -11,49 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/database/DataBaseContactServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/database/DataBaseContactServiceFactoryclass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBookCOP1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/UserServiceDataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactoryclass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createfileservice/FileСontactServiceFactoryclass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/creatememorycontactservice/InMemoryContactServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/creatememorycontactservice/InMemoryContactServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/creatememorycontactservice/InMemoryContactServiceFactoryclass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/creatememorycontactservice/InMemoryContactServiceFactoryclass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/ApplicationFasad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/facade/ApplicationFasad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBookCOPY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBookCOPY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/points/AddContactMenuitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/points/AddContactMenuitem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/points/ExistMenuitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/points/ExistMenuitem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/points/SearchnameMenuitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/points/SearchnameMenuitem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/DataBaseContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/DataBaseContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/FileContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/FileContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/InMemoryContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/InMemoryContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/NioContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/NioContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/database/Postgres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/database/Postgres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/FictiApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/FictiApiUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/menu/PhoneBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/menu/points/AddContactMenuitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/menu/points/AddContactMenuitem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/menu/points/ExistMenuitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/menu/points/ExistMenuitem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/menu/points/GetAllContactMenuitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/menu/points/GetAllContactMenuitem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/menu/points/SearchnameMenuitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/menu/points/SearchnameMenuitem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/services/ContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/UsersService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/ApiContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/ApiContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/FileContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/FileContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/InMemoryContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/services/implementation/contact/InMemoryContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/implementation/user/ApiUserService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,14 +123,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1613679004048" />
-    <state x="724" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1615065726716">
+    <state x="724" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1615069412407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="724" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1615065726716" />
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613846666511">
+    <state x="724" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1615069412407" />
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1615065946762">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1613846666511" />
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1615065946762" />
     <state x="455" y="235" width="520" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1613850160099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -206,22 +171,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614110310616" />
-    <state width="1323" height="20" key="GridCell.Tab.0.bottom" timestamp="1615062478482">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1615069598963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="20" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615062478482" />
-    <state width="1323" height="20" key="GridCell.Tab.0.center" timestamp="1615062478482">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1615069598963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="20" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615062478482" />
-    <state width="1323" height="20" key="GridCell.Tab.0.left" timestamp="1615062478482">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1615069598963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="20" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615062478482" />
-    <state width="1323" height="20" key="GridCell.Tab.0.right" timestamp="1615062478482">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1615069598963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="20" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615062478482" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612818554160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

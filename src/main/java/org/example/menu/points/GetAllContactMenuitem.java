@@ -7,6 +7,7 @@ import org.example.services.ContactService;
 import org.example.services.UsersService;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class GetAllContactMenuitem implements MenuItem {
 
@@ -17,7 +18,7 @@ public class GetAllContactMenuitem implements MenuItem {
     }
 
     @Override
-    public void doAction() throws IOException, InterruptedException {
+    public void doAction() throws IOException, InterruptedException, SQLException {
         java.util.List<Contact> contactList;
         contactList =  service.getAllcontact();
         System.out.println(contactList);

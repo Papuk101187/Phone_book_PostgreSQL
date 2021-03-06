@@ -8,6 +8,7 @@ import org.example.services.UsersService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 public class SearchnameMenuitem implements MenuItem {
 
@@ -19,7 +20,7 @@ public class SearchnameMenuitem implements MenuItem {
     }
 
     @Override
-    public void doAction() throws IOException, InterruptedException {
+    public void doAction() throws IOException, InterruptedException, SQLException {
         System.out.println("Введите имя для поиска контакта");
         BufferedReader names = new BufferedReader(new InputStreamReader(System.in)); //
         String name = names.readLine();

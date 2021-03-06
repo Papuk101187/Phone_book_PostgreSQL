@@ -58,22 +58,7 @@ public class PhoneBookCOPY {
 
         while (true) {
 
-            if (contactService.checkingService() == "DataBaseContactService") {
-                user = getDataUser(user);
-                if (usersService.login(user) == null) {
-                    System.out.println("Логин отсутсвет");
-                    System.out.println("Просим ввести данные для регистрации");
-                    user = getDataUser(user);
-                    status = usersService.register(user);
-                    System.out.println(status);
-                }
-                {
-                    showMenu();
-                }
-
-            } else {
-                showMenu();
-            }
+            DataBase();
 
         }
 
@@ -81,9 +66,24 @@ public class PhoneBookCOPY {
 
     }
 
+    private void DataBase() throws IOException, InterruptedException, SQLException {
+        if (contactService.checkingService() == "DataBaseContactService") {
+            user = getDataUser(user);
+            if (usersService.login(user) == null) {
+                System.out.println("Логин отсутсвет");
+                System.out.println("Просим ввести данные для регистрации");
+                user = getDataUser(user);
+                status = usersService.register(user);
+                System.out.println(status);
+            }
+            {
+                showMenu();
+            }
 
-
-
+        } else {
+            showMenu();
+        }
+    }
 
 
     private User getDataUser(User user) throws IOException {
