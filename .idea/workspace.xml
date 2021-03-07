@@ -12,8 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frf.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +174,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="79" key="DBNavigator.DatasetFilterDialog/0.0.1366.728@0.0.1366.728" timestamp="1615146971546" />
+    <state x="403" y="265" width="560" height="241" key="DBNavigator.IdleConnectionDialog" timestamp="1615149835577">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="403" y="265" width="560" height="241" key="DBNavigator.IdleConnectionDialog/0.0.1366.728@0.0.1366.728" timestamp="1615149835577" />
     <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog" timestamp="1615148081243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
