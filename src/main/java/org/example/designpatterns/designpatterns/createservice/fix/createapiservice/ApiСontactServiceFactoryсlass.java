@@ -32,11 +32,10 @@ public class ApiСontactServiceFactoryсlass implements ApiСontactServiceFactor
         usersService = createUsersService();
 
         contactService = new ApiContactService(
-                usersService,
                 objectMapper, httpClient,
                 applicationGetPropertys.getBaseURLadd(),
                 applicationGetPropertys.getBaseURLsearch(),
-                applicationGetPropertys.getBaseURLadd());
+                applicationGetPropertys.getBaseURLget());
         return contactService;
 
     }

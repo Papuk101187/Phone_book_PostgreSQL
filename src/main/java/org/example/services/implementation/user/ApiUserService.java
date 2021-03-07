@@ -1,6 +1,8 @@
 package org.example.services.implementation.user;
 
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.services.implementation.dto.StatusResponce;
 import org.example.services.implementation.dto.TokenResponse;
 import org.example.entity.User;
 import org.example.services.UsersService;
@@ -15,7 +17,7 @@ import java.time.LocalDateTime;
 
 public class ApiUserService implements UsersService {
 
-    private String token;
+    private String TOKEN;
     private LocalDateTime localDateTime;
     private String baseURLregistration;
     private String baseURLlogin;
@@ -36,7 +38,7 @@ public class ApiUserService implements UsersService {
 
     @Override
     public String getToken() {
-        return token;
+        return TOKEN;
     }
 
 
@@ -44,7 +46,10 @@ public class ApiUserService implements UsersService {
     public String register(User user) throws IOException, InterruptedException {
 
         User user1 = user;
-        System.out.println("-------------------------");
+
+        System.out.println(user.getLogin());
+        System.out.println(user.getDate_born());
+        System.out.println(user.getPassword());
 
 
         System.out.println(user1.getLogin());
@@ -59,15 +64,24 @@ public class ApiUserService implements UsersService {
                 .build();
 
         HttpResponse<String> response = httpCli.send(request, HttpResponse.BodyHandlers.ofString());
-        String respons = response.body();
+        String responce = response.body();
+        System.out.println("responce "+responce);
 
-        return respons;
+        StatusResponce statusResponce = objectMapper.readValue(responce,StatusResponce.class);
+        String s = statusResponce.status;
+
+        return s;
+
+
+
+
+
+
+
     }
 
     @Override
     public String login(User user) throws IOException, InterruptedException {
-
-        System.out.println("ApiUserService.login");
 
         User user1 = user;
 
@@ -85,8 +99,9 @@ public class ApiUserService implements UsersService {
         String responce = response.body();
 
         TokenResponse tokenResponse = objectMapper.readValue(responce,TokenResponse.class);
-        token =tokenResponse.token;
-        return token;
+        TOKEN =tokenResponse.token;
+        System.out.println("Получили "+TOKEN);
+        return TOKEN;
     }
 
 

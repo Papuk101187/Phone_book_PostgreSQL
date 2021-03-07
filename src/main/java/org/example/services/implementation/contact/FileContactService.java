@@ -4,6 +4,7 @@ import org.example.entity.Contact;
 import org.example.entity.ContactParser;
 import org.example.entity.User;
 import org.example.services.ContactService;
+import org.example.services.UsersService;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -78,7 +79,7 @@ public class FileContactService implements ContactService {
     }
 
     @Override
-    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+    public void setUser(User user, UsersService usersService) throws IOException, InterruptedException, SQLException {
         this.user=user;
     }
 

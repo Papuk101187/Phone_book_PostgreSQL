@@ -21,7 +21,7 @@ import java.util.List;
 
 public class ApiContactService implements ContactService {
 
-    UsersService usersServic;
+    UsersService usersService;
     ObjectMapper objectMapp;
     public String urladd;
     public String urlget;
@@ -39,17 +39,17 @@ public class ApiContactService implements ContactService {
     }
 
     @Override
-    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+    public void setUser(User user, UsersService usersService) throws IOException, InterruptedException, SQLException {
         this.user=user;
+        this.usersService=usersService;
     }
 
-    public ApiContactService(UsersService usersService,
+    public ApiContactService(
                              ObjectMapper objectMapper,
                              HttpClient client,
                              String urladdcontact,
                              String urlsearchcontact,
                              String urlget) {
-        this.usersServic = usersService;
         this.check = true;
         this.objectMapp = objectMapper;
         this.httpClie = client;
@@ -60,10 +60,12 @@ public class ApiContactService implements ContactService {
 
     public String add(Contact contact) throws IOException, InterruptedException {
 
+        System.out.println(usersService.getToken());
+
         HttpRequest httpRequest = jsonHttpRequestFactory.createPostRequest(
                 urladd,
                 objectMapp.writeValueAsString(contact),
-                usersServic.getToken());
+                usersService.getToken());
 
         HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
         String status = httpResponse.body();
@@ -73,6 +75,9 @@ public class ApiContactService implements ContactService {
     }
 
     public List<Contact> searchContact(String name) throws IOException, InterruptedException {
+
+
+        System.out.println(usersService.getToken());
 
         List<Contact> contacts = null;
 
@@ -86,7 +91,7 @@ public class ApiContactService implements ContactService {
         HttpRequest httpRequest = jsonHttpRequestFactory.createPostRequest(
                 urlsearch,
                 objectMapp.writeValueAsString(requestContactName),
-                usersServic.getToken());
+                usersService.getToken());
 
         HttpResponse<String> httpResponse = jsonHttpResponce.createResponse(httpRequest, httpClie);
         status = httpResponse.body();
@@ -100,10 +105,13 @@ public class ApiContactService implements ContactService {
 
     public List<Contact> getAllcontact() throws IOException, InterruptedException {
 
+        System.out.println("КУКУ"+ usersService.getToken());
+        System.out.println("urlget "+urlget);
+
         ObjectMapper objectMapper = new ObjectMapper();
         List<Contact> contacts;
 
-        HttpRequest httpRequest = jsonHttpRequestFactory.createGetRequest(urlget,usersServic.getToken());
+        HttpRequest httpRequest = jsonHttpRequestFactory.createGetRequest(urlget,usersService.getToken());
 
         HttpResponse<String> response = httpClie.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         String status = response.body();

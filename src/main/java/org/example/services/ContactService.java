@@ -13,7 +13,7 @@ public interface ContactService {
     List<Contact> searchContact(String name) throws IOException, InterruptedException, SQLException;
     List<Contact> getAllcontact() throws IOException, InterruptedException, SQLException;
     public String checkingService();
-    void setUser (User user) throws IOException, InterruptedException, SQLException;
+    void setUser(User user, UsersService usersService) throws IOException, InterruptedException, SQLException;
 
 
 }

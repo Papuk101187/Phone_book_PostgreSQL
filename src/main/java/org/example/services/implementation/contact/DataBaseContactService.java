@@ -29,7 +29,7 @@ public class DataBaseContactService implements ContactService {
     }
 
     @Override
-    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+    public void setUser(User user, UsersService usersService) throws IOException, InterruptedException, SQLException {
         this.user = user;
     }
 
@@ -37,15 +37,19 @@ public class DataBaseContactService implements ContactService {
     public String add(Contact contact) throws IOException, InterruptedException, SQLException {
 
         Connection connection = DriverManager.getConnection(dsn, userbas, password);
-        String sql = "INSERT INTO contacts (name_contact,type_contact,value_contact,id_user)" +
-                " VALUES (?,?,?,(SELECT id_user FROM users WHERE login_user=?))";
+
+        String sql = "INSERT INTO contacts (name_contact,type_contact,value_contact,id_user) " +
+                "VALUES (?,?,?,(SELECT id_user FROM users WHERE login_user=? AND login_password=? AND date_born=? ))";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, contact.getName());
         preparedStatement.setString(2, contact.getType());
         preparedStatement.setString(3, contact.getValue());
         preparedStatement.setString(4, user.getLogin());
+        preparedStatement.setString(5, user.getPassword());
+        preparedStatement.setString(6, user.getDate_born());
         preparedStatement.executeUpdate();
+
 
         return "Контакт в базу данных добавлен";
     }
@@ -85,10 +89,14 @@ public class DataBaseContactService implements ContactService {
         Contact contact = null;
 
 
-        PreparedStatement statement1 = connection.prepareStatement(
-                "SELECT name_contact , value_contact , type_contact  FROM contacts;");
+        String sql = "SELECT name_contact,type_contact,value_contact FROM contacts INNER JOIN users ON users.id_user=contacts.id_user WHERE login_user=? AND login_password=? AND date_born=?;";
 
-        ResultSet resultSet = statement1.executeQuery();
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, user.getLogin());
+        preparedStatement.setString(2, user.getPassword());
+        preparedStatement.setString(3, user.getDate_born());
+
+        ResultSet resultSet = preparedStatement.executeQuery();
 
         while (resultSet.next()) {
             Contact contact1 = new Contact();
@@ -97,7 +105,6 @@ public class DataBaseContactService implements ContactService {
             contact1.setType(resultSet.getString("type_contact"));
             contacts.add(contact1);
         }
-
 
         return contacts;
 

@@ -11,14 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/dto/StatusResponce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/points/SearchnameMenuitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/points/SearchnameMenuitem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/designpatterns/designpatterns/createservice/fix/createapiservice/ApiСontactServiceFactoryсlass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBookCOPY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/PhoneBookCOPY.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/ApiContactService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/DataBaseContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/DataBaseContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/FileContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/FileContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/InMemoryContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/InMemoryContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/NioContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/contact/NioContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/implementation/user/ApiUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/menu/points/SearchnameMenuitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/menu/points/SearchnameMenuitem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/services/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/services/ContactService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,7 @@
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -127,10 +133,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="724" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1615069412407" />
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1615065946762">
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1615142587297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1615065946762" />
+    <state x="283" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1615142587297" />
     <state x="455" y="235" width="520" height="264" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1613850160099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -171,22 +177,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614110310616" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1615069598963">
+    <state width="1323" height="305" key="GridCell.Tab.0.bottom" timestamp="1615146246378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1615069598963">
+    <state width="1323" height="305" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615146246378" />
+    <state width="1323" height="305" key="GridCell.Tab.0.center" timestamp="1615146246378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1615069598963">
+    <state width="1323" height="305" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615146246378" />
+    <state width="1323" height="305" key="GridCell.Tab.0.left" timestamp="1615146246378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1615069598963">
+    <state width="1323" height="305" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615146246378" />
+    <state width="1323" height="305" key="GridCell.Tab.0.right" timestamp="1615146246378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615069598963" />
+    <state width="1323" height="305" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615146246378" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612818554160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -195,14 +201,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="498" y="298" key="ReplaceDuplicatesPrompt/0.0.1366.728@0.0.1366.728" timestamp="1612877561579" />
-    <state x="413" y="116" key="extract.method.dialog" timestamp="1615058405674">
+    <state x="413" y="116" key="extract.method.dialog" timestamp="1615069982092">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="116" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1615058405674" />
+    <state x="413" y="116" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1615069982092" />
     <state x="65" y="25" key="new project wizard" timestamp="1613678107695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1613678107695" />
+    <state x="415" y="122" key="refactoring.ChangeSignatureDialog" timestamp="1615126526889">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="415" y="122" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1615126526889" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614959263207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

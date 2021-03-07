@@ -3,6 +3,7 @@ package org.example.services.implementation.contact;
 import org.example.entity.Contact;
 import org.example.entity.User;
 import org.example.services.ContactService;
+import org.example.services.UsersService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -59,7 +60,7 @@ public class InMemoryContactService implements ContactService {
     }
 
     @Override
-    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+    public void setUser(User user, UsersService usersService) throws IOException, InterruptedException, SQLException {
         this.user=user;
     }
 

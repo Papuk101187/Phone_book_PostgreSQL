@@ -5,15 +5,12 @@ import org.example.entity.ContactBuffers;
 import org.example.entity.ContactParser;
 import org.example.entity.User;
 import org.example.services.ContactService;
+import org.example.services.UsersService;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Consumer;
 
 
 public class NioContactService implements ContactService {
@@ -70,7 +67,7 @@ public class NioContactService implements ContactService {
     }
 
     @Override
-    public void setUser(User user) throws IOException, InterruptedException, SQLException {
+    public void setUser(User user, UsersService usersService) throws IOException, InterruptedException, SQLException {
         this.user=user;
     }
 
