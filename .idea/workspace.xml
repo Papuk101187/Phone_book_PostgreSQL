@@ -11,8 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b9a3b4-21f8-48e3-99e2-0b29217f1cf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/init" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frf.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -173,30 +175,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="79" key="DBNavigator.DatasetFilterDialog/0.0.1366.728@0.0.1366.728" timestamp="1615146971546" />
-    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog" timestamp="1615146834068">
+    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog" timestamp="1615148081243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615146834068" />
+    <state x="213" y="19" key="DBNavigator.ProjectSettingsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615148081243" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1615146822848">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615146822848" />
-    <state width="1323" height="177" key="GridCell.Tab.0.bottom" timestamp="1615146695828">
+    <state width="1323" height="177" key="GridCell.Tab.0.bottom" timestamp="1615148012278">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615146695828" />
-    <state width="1323" height="177" key="GridCell.Tab.0.center" timestamp="1615146695828">
+    <state width="1323" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615148012278" />
+    <state width="1323" height="177" key="GridCell.Tab.0.center" timestamp="1615148012278">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615146695828" />
-    <state width="1323" height="177" key="GridCell.Tab.0.left" timestamp="1615146695828">
+    <state width="1323" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615148012278" />
+    <state width="1323" height="177" key="GridCell.Tab.0.left" timestamp="1615148012278">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615146695828" />
-    <state width="1323" height="177" key="GridCell.Tab.0.right" timestamp="1615146695828">
+    <state width="1323" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615148012278" />
+    <state width="1323" height="177" key="GridCell.Tab.0.right" timestamp="1615148012278">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615146695828" />
+    <state width="1323" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615148012278" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612818554160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
